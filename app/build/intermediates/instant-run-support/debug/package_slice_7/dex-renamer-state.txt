@@ -1,0 +1,4 @@
+#Sun Mar 26 22:10:41 KST 2017
+base.0=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7
+renamed.0=classes.dex
+file.0=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7\\classes.dex

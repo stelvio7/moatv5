@@ -1,0 +1,7 @@
+#Sun Mar 26 22:30:55 KST 2017
+base.0=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_195f8bd1db36eb141f67a1ee30529a60e8fb0819
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_012311bf871db55776bddc5351d9fca7a7938257\\classes.dex
+base.1=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_012311bf871db55776bddc5351d9fca7a7938257
+file.0=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_195f8bd1db36eb141f67a1ee30529a60e8fb0819\\classes.dex
