@@ -1,7 +1,7 @@
-#Sun Mar 26 13:27:40 KST 2017
-base.0=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\universal-image-loader-1.9.2_05de3131ce7a92222f01e85533c9002c38023992
+#Tue Mar 28 16:23:26 KST 2017
+base.0=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\universal-image-loader-1.9.2_2d6ef429b5a4cd081d1bf9af43c33ecf6835aabe
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\RootTools-3.4_477fa9de7228882c779513b4d41a6172f7fffcec\\classes.dex
-base.1=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\RootTools-3.4_477fa9de7228882c779513b4d41a6172f7fffcec
-file.0=C\:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\universal-image-loader-1.9.2_05de3131ce7a92222f01e85533c9002c38023992\\classes.dex
+file.1=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\RootTools-3.4_a19d0ef07b0cc05d9c85c67fcf6177296f3f6be3\\classes.dex
+base.1=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\RootTools-3.4_a19d0ef07b0cc05d9c85c67fcf6177296f3f6be3
+file.0=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\universal-image-loader-1.9.2_2d6ef429b5a4cd081d1bf9af43c33ecf6835aabe\\classes.dex

@@ -6,90 +6,97 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1490535053992"
-    token="234161158747766669"
+    timestamp="1490688008883"
+    token="1536576633890559689"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="817" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="17" />
     <task
         name="verifier"
-        duration="0" />
+        duration="5" />
 
     <artifact
-        location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\outputs\apk\app-debug.apk"
+        location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="E:\oldData\201703android\moatv5_0328\app\build\outputs\apk\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1490526851209"
+        timestamp="1490685788740"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\outputs\apk\app-debug.apk"
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1490527925938"
+        timestamp="1490687593880"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\oldData\201703android\moatv5_0328\app\build\outputs\apk\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1490533836283"
+        timestamp="1490688008883"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="E:\oldData\201703android\moatv5_0328\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1490535053992"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\outputs\apk\app-debug.apk"
+            location="E:\oldData\201703android\moatv5_0328\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
 

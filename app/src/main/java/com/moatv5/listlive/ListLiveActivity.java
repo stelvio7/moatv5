@@ -6,6 +6,7 @@ import com.moatv5.model.Constant;
 import com.moatv5.model.LiveChannel;
 import com.moatv5.settop.R;
 import com.noh.util.PostHttp;
+import com.noh.util.Util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -148,7 +149,8 @@ public class ListLiveActivity  extends Activity {
 			String strJson = "";
 			PostHttp postmake = new PostHttp();
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-			nameValuePairs.add(new BasicNameValuePair("date", "2017-03-18"));
+			nameValuePairs.add(new BasicNameValuePair("date", Util.getNowDay()));
+			Log.d("text", Util.getNowDay());
 			strJson = postmake.httpConnect(
 					Constant.mainUrl + "/module/tv/broadcasttable.php", nameValuePairs);
 			JSONArray jArray = null;

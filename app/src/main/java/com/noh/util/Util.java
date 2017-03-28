@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 
 import com.moatv5.settop.R;
@@ -229,5 +230,30 @@ public class Util {
         }catch(Exception ee){}
         return 0;
     }
-		 
+
+	public static String getNowDay(){
+		GregorianCalendar calendar = new GregorianCalendar();
+		int year = calendar.get(Calendar.YEAR);
+		// 월은 0~11로 리턴되기 때문에 1을 더한다.
+		int month = calendar.get(Calendar.MONTH) + 1;
+		int date = calendar.get(Calendar.DATE);
+
+		// 연월일 시분초를 주어진 포맷으로 출력
+		return String.format("%d-%02d-%02d",
+				year, month, date);
+	}
+
+	public static String getNowTime(){
+		GregorianCalendar calendar = new GregorianCalendar();
+		int amPm = calendar.get(Calendar.AM_PM);
+		int hour = calendar.get(Calendar.HOUR_OF_DAY);
+		int min = calendar.get(Calendar.MINUTE);
+		int sec = calendar.get(Calendar.SECOND);
+		String sAmPm = amPm == Calendar.AM ? "오전" : "오후";
+
+		// 연월일 시분초를 주어진 포맷으로 출력
+		return String.format("%02d:%02d",
+				hour, min);
+	}
 }
+
