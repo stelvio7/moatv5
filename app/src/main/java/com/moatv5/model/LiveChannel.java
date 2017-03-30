@@ -4,22 +4,23 @@ import com.moatv5.listlive.ListLiveData;
 import com.moatv5.listlive.ListLiveItemData;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class LiveChannel {
 	private String code;
 	private String name;
-	private ArrayList<ListLiveItemData> listLiveDataList = new ArrayList<ListLiveItemData>();
+	private ArrayList<ListLiveItemData> listLiveDataList[] = new ArrayList[4];
 
 	public LiveChannel(String code, String name){
 		this.code = code;
 		this.name = name;
 	}
 
-	public ArrayList<ListLiveItemData> getListLiveDataList() {
+	public ArrayList<ListLiveItemData>[] getListLiveDataList() {
 		return listLiveDataList;
 	}
 
-	public void setListLiveDataList(ArrayList<ListLiveItemData> listLiveDataList) {
+	public void setListLiveDataList(ArrayList<ListLiveItemData>[] listLiveDataList) {
 		this.listLiveDataList = listLiveDataList;
 	}
 
