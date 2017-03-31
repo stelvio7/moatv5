@@ -1,7 +1,0 @@
-#Tue Mar 28 16:23:26 KST 2017
-base.0=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\universal-image-loader-1.9.2_2d6ef429b5a4cd081d1bf9af43c33ecf6835aabe
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\RootTools-3.4_a19d0ef07b0cc05d9c85c67fcf6177296f3f6be3\\classes.dex
-base.1=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\RootTools-3.4_a19d0ef07b0cc05d9c85c67fcf6177296f3f6be3
-file.0=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\universal-image-loader-1.9.2_2d6ef429b5a4cd081d1bf9af43c33ecf6835aabe\\classes.dex

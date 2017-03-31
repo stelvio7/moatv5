@@ -20,16 +20,16 @@
         "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\layout\\restore.xml"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogpopupmovie.xml",
-        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\layout\\dialogpopupmovie.xml"
+        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shortchannel.xml",
+        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\layout\\shortchannel.xml"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogpopupdelete.xml",
         "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\layout\\dialogpopupdelete.xml"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shortchannel.xml",
-        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\layout\\shortchannel.xml"
+        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogpopupmovie.xml",
+        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\layout\\dialogpopupmovie.xml"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shoppingcoverflow.xml",

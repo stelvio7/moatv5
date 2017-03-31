@@ -472,12 +472,12 @@
         "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\category_delivery_superbowl_on.png"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\category_lshop_kitchenp_on.png",
-        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\category_lshop_kitchenp_on.png"
-    },
-    {
         "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\speed_3.png",
         "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\speed_3.png"
+    },
+    {
+        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\category_lshop_kitchenp_on.png",
+        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\category_lshop_kitchenp_on.png"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\movie_play_off.png",
@@ -1880,12 +1880,12 @@
         "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\button_broadcast_baby_on.png"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\category_gshop_beauty_on.png",
-        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\category_gshop_beauty_on.png"
-    },
-    {
         "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\list_bg1.png",
         "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\list_bg1.png"
+    },
+    {
+        "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\category_gshop_beauty_on.png",
+        "source": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\drawable-mdpi\\category_gshop_beauty_on.png"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\category_fshop_other_off.png",

@@ -1,7 +1,0 @@
-#Wed Mar 29 10:33:26 KST 2017
-base.0=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0aa97067903458dac4b06abd113e1d0b74d0edb0
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a8e45189d7b8d762dbc147ec8b960506030f145a\\classes.dex
-base.1=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a8e45189d7b8d762dbc147ec8b960506030f145a
-file.0=E\:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0aa97067903458dac4b06abd113e1d0b74d0edb0\\classes.dex

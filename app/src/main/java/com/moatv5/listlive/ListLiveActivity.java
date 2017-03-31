@@ -218,10 +218,10 @@ public class ListLiveActivity extends Activity {
                                         list3.add(listItem);
                                     if(Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime+3 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime+4)
                                         list4.add(listItem);
-                                    channelList.get().getListLiveDataList()[0] = list1;
-                                    channelList.getListLiveDataList()[1] = list2;
-                                    channelList.getListLiveDataList()[2] = list3;
-                                    channelList.getListLiveDataList()[3] = list4;
+                                   // channelList.get().getListLiveDataList()[0] = list1;
+                                    //channelList.getListLiveDataList()[1] = list2;
+                                    //channelList.getListLiveDataList()[2] = list3;
+                                    //channelList.getListLiveDataList()[3] = list4;
                                 }
                                 //Log.d("sdfsdf", "" + channelList.get(0).getListLiveDataList().size());
                             }
