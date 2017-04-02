@@ -366,7 +366,7 @@ public class DetailYellowActivity extends Activity{
 	 		String strJson = "";
 			PostHttp postmake = new PostHttp();
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-			if(!idx.equals("")){
+			if(code == null){
 				nameValuePairs.add(new BasicNameValuePair("idx", idx));
 			}else {
 				nameValuePairs.add(new BasicNameValuePair("idx", code));
@@ -547,7 +547,7 @@ public class DetailYellowActivity extends Activity{
 			String strJson = "";
 			PostHttp postmake = new PostHttp();
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-			if(!idx.equals("")){
+			if(code == null){
 				nameValuePairs.add(new BasicNameValuePair("idx", idx));
 			}else {
 				nameValuePairs.add(new BasicNameValuePair("code1", code));

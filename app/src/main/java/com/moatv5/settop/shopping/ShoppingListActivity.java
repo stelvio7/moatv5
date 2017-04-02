@@ -968,7 +968,7 @@ public class ShoppingListActivity extends Activity {
 		String strJson = "";
 		PostHttp postmake = new PostHttp();
 		ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-        if(!idx.equals("")){
+        if(code1 == null){
             nameValuePairs.add(new BasicNameValuePair("idx", idx));
         }else {
             nameValuePairs.add(new BasicNameValuePair("code1", code1));
