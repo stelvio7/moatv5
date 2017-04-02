@@ -621,7 +621,8 @@ public class MainMenuActivity extends Activity{
 				// TODO Auto-generated method stub
 				mainid = "shopping";
 				subid = "life";
-				goShopping();
+				goLife();
+				//goShopping();
 				return false;
 			}
 		});
@@ -638,7 +639,7 @@ public class MainMenuActivity extends Activity{
 				// TODO Auto-generated method stub
 				mainid = "shopping";
 				subid = "leisure";
-				goLife();
+				goShopping();
 				return false;
 			}
 		});
@@ -1680,7 +1681,7 @@ public class MainMenuActivity extends Activity{
 							break;
 						case 2:
 							subid = "life";
-							goShopping();
+							goLife();
 							break;
 						case 3:
 							subid = "wear";
@@ -1688,7 +1689,8 @@ public class MainMenuActivity extends Activity{
 							break;
 						case 4:
 							subid = "leisure";
-							goLife();
+							goShopping();
+
 							break;
 						case 5:
 							subid = "group";

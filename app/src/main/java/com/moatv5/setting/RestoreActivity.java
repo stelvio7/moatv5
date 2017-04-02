@@ -193,7 +193,7 @@ public class RestoreActivity extends Activity {
 
 
                 if (position != -1) {
-                    mCustomPopup2 = new Detail2DialogActivity(RestoreActivity.this, xPop2PlayClickListener, xPop2PlayKeyListener, xPop2RestoreClickListener, xPop2RestoreKeyListener, mClickAdListener, mKeyAdListener, mClickAd2Listener, mKeyAd2Listener,"delete", adImage, adImage2);
+                    mCustomPopup2 = new Detail2DialogActivity(RestoreActivity.this, xPop2PlayClickListener, xPop2PlayKeyListener, xPop2RestoreClickListener, xPop2RestoreKeyListener, mClickAdListener, mKeyAdListener, mClickAd2Listener,"delete", adImage, adImage2);
                     mCustomPopup2.requestWindowFeature(Window.FEATURE_NO_TITLE);
                     mCustomPopup2.getWindow().setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
                     mCustomPopup2.show();

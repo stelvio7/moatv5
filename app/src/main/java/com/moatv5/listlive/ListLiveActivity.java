@@ -4,16 +4,23 @@ import java.util.ArrayList;
 
 import com.moatv5.model.Constant;
 import com.moatv5.model.LiveChannel;
+import com.moatv5.settop.BroadcastListActivity;
 import com.moatv5.settop.R;
 import com.noh.util.PostHttp;
 import com.noh.util.Util;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +44,11 @@ public class ListLiveActivity extends Activity {
     private TextView listTime4;
     private int selectedTime;
 
+    private String day;
+    private int exDay;
+
+    private ImageView btnLeft = null;
+    private ImageView btnRight = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,13 +59,16 @@ public class ListLiveActivity extends Activity {
         ChannelTask channelTask = new ChannelTask(mContext);
         channelTask.execute();
 
-        liveListAdapter = new ListLiveAdapter(ListLiveActivity.this,
-                channelList);
         listTime1 = (TextView) findViewById(R.id.listTime1);
         listTime2 = (TextView) findViewById(R.id.listTime2);
         listTime3 = (TextView) findViewById(R.id.listTime3);
         listTime4 = (TextView) findViewById(R.id.listTime4);
+        liveListAdapter = new ListLiveAdapter(ListLiveActivity.this,
+                channelList, listTime1, listTime2, listTime3, listTime4, this);
 
+
+        exDay = 0;
+        day = Util.getExDay(exDay);
         setNowSelectedTime();
         setTimeHead();
 
@@ -64,9 +79,68 @@ public class ListLiveActivity extends Activity {
             listView.setFocusable(false);
             //listView.setOnItemClickListener(this);
             listView.setItemsCanFocus(true);
-            listView.setDividerHeight(0);
+            listView.setDivider(new ColorDrawable(0xEEEEEEEE));
+            listView.setDividerHeight(3);
             //listView.setOnScrollListener(this);
         }
+
+        btnLeft = (ImageView) findViewById(R.id.pageleft);
+        btnRight = (ImageView) findViewById(R.id.pageright);
+
+        btnRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+                goRight();
+
+            }
+        });
+
+        btnLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+
+               goLeft();
+            }
+        });
+    }
+
+    public void goRight(){
+        if(selectedTime < 20)
+            selectedTime+=4;
+        else {
+            exDay++;
+            if(exDay > 2) {
+                exDay = 2;
+                return;
+            }
+            selectedTime = 0;
+            day = Util.getExDay(exDay);
+        }
+        setTimeHead();
+        ListTask listTask = new ListTask(mContext);
+        listTask.execute();
+        return;
+    }
+
+    public void goLeft(){
+        if(selectedTime > 0)
+            selectedTime-=4;
+        else {
+            exDay--;
+            if(exDay < -2) {
+                exDay = -2;
+                return;
+            }
+            selectedTime = 20;
+            day = Util.getExDay(exDay);
+        }
+        setTimeHead();
+        ListTask listTask = new ListTask(mContext);
+        listTask.execute();
+        return;
     }
 
     private void setNowSelectedTime() {
@@ -167,6 +241,8 @@ public class ListLiveActivity extends Activity {
         }
     }
 
+    private ProgressDialog mProgress;
+
     class ListTask extends AsyncTask<String, Integer, Long> {
         private int position;
         private Context mContext;
@@ -177,6 +253,7 @@ public class ListLiveActivity extends Activity {
 
         @Override
         protected final void onPreExecute() {
+            showProgress();
         }
 
         @Override
@@ -185,48 +262,47 @@ public class ListLiveActivity extends Activity {
             String strJson = "";
             PostHttp postmake = new PostHttp();
             ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-            nameValuePairs.add(new BasicNameValuePair("date", Util.getNowDay()));
+            nameValuePairs.add(new BasicNameValuePair("date", day));
             Log.d("text", Util.getNowDay());
             strJson = postmake.httpConnect(
                     Constant.mainUrl + "/module/tv/broadcasttable.php", nameValuePairs);
             JSONArray jArray = null;
             try {
                 jArray = new JSONArray(strJson);
-                for (int i = 0; i < jArray.length(); i++) {
-                    JSONObject json_data = jArray.getJSONObject(i);
+                if (channelList.size() > 0)
+                    for (LiveChannel liveChannel : channelList) {
+                        ArrayList<ListLiveItemData> list1 = new ArrayList<ListLiveItemData>();
+                        ArrayList<ListLiveItemData> list2 = new ArrayList<ListLiveItemData>();
+                        ArrayList<ListLiveItemData> list3 = new ArrayList<ListLiveItemData>();
+                        ArrayList<ListLiveItemData> list4 = new ArrayList<ListLiveItemData>();
+                        for (int i = 0; i < jArray.length(); i++) {
+                            JSONObject json_data = jArray.getJSONObject(i);
+                            String code = json_data.getString("chenal");
+                            String time = json_data.getString("time");
+                            String title = json_data.getString("title");
+                            String state = json_data.getString("state");
 
-                    String code = json_data.getString("chenal");
-                    String time = json_data.getString("time");
-                    String title = json_data.getString("title");
-                    String state = json_data.getString("state");
-
-
-                    if (code != null && time != null) {
-                        ListLiveItemData listItem = new ListLiveItemData(title, state, time, "link");
-                        if (channelList.size() > 0)
-                            for (LiveChannel liveChannel : channelList) {
+                            if (code != null && time != null) {
+                                ListLiveItemData listItem = new ListLiveItemData(title, state, time, "link");
                                 if (liveChannel.getCode().equals(code)) {
-                                    ArrayList<ListLiveItemData> list1 = new ArrayList<ListLiveItemData>();
-                                    ArrayList<ListLiveItemData> list2 = new ArrayList<ListLiveItemData>();
-                                    ArrayList<ListLiveItemData> list3 = new ArrayList<ListLiveItemData>();
-                                    ArrayList<ListLiveItemData> list4 = new ArrayList<ListLiveItemData>();
-                                    if(Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime+1)
+                                    if (Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime + 1)
                                         list1.add(listItem);
-                                    if(Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime+1 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime+2)
+                                    if (Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime + 1 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime + 2)
                                         list2.add(listItem);
-                                    if(Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime+2 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime+3)
+                                    if (Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime + 2 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime + 3)
                                         list3.add(listItem);
-                                    if(Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime+3 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime+4)
+                                    if (Integer.parseInt(listItem.getTime().substring(0, 2)) >= selectedTime + 3 && Integer.parseInt(listItem.getTime().substring(0, 2)) < selectedTime + 4)
                                         list4.add(listItem);
-                                   // channelList.get().getListLiveDataList()[0] = list1;
-                                    //channelList.getListLiveDataList()[1] = list2;
-                                    //channelList.getListLiveDataList()[2] = list3;
-                                    //channelList.getListLiveDataList()[3] = list4;
                                 }
                                 //Log.d("sdfsdf", "" + channelList.get(0).getListLiveDataList().size());
                             }
+                        }
+                        //channelList.get(0).getListLiveDataList()[0] = list1;
+                        liveChannel.getListLiveDataList()[0] = list1;
+                        liveChannel.getListLiveDataList()[1] = list2;
+                        liveChannel.getListLiveDataList()[2] = list3;
+                        liveChannel.getListLiveDataList()[3] = list4;
                     }
-                }
             } catch (Exception e) {
                 Log.e(null, e.toString());
             }
@@ -234,11 +310,13 @@ public class ListLiveActivity extends Activity {
         }
 
         protected void showCancelMessage() {
+            dismissProgress();
             //Toast.makeText(context, mTaskCancelledMessage, Toast.LENGTH_SHORT).show();
         }
 
         protected void showError(Context context, Throwable t) {
             //TODO exception
+            dismissProgress();
             String errorMessage = context.getString(R.string.str_network_error);
             Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show();
         }
@@ -246,6 +324,7 @@ public class ListLiveActivity extends Activity {
         @Override
         protected void onPostExecute(Long result) {
             // TODO Auto-generated method stub
+            dismissProgress();
             liveListAdapter.notifyDataSetChanged();
         }
 
@@ -260,6 +339,28 @@ public class ListLiveActivity extends Activity {
             // TODO Auto-generated method stub
             super.onCancelled();
             showCancelMessage();
+
+        }
+
+        protected void showProgress() {
+            mProgress = new ProgressDialog(ListLiveActivity.this);
+            mProgress.setCancelable(true);
+            mProgress.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                public void onCancel(DialogInterface dialog) {
+                    ListLiveActivity.ListTask.this.cancel(true);
+                }
+            });
+
+            String message = mContext.getString(R.string.str_wait);
+            mProgress.setMessage(message);
+            mProgress.show();
+        }
+
+        protected void dismissProgress() {
+
+            if (mProgress != null) {
+                mProgress.dismiss();
+            }
         }
     }
 

@@ -38,7 +38,6 @@ public class Detail2DialogActivity extends Dialog {
     private View.OnClickListener mClickRestoreListener;
     private Dialog.OnKeyListener mKeyAdListener;
     private View.OnClickListener mClickAdListener;
-    private Dialog.OnKeyListener mKeyAd2Listener;
     private View.OnClickListener mClickAd2Listener;
     private Button movieadd;
     private Button movieplay;
@@ -74,7 +73,7 @@ public class Detail2DialogActivity extends Dialog {
 
 
         setLayout();
-        setClickListener(mXClickPlayListener, mClickPlayListener, mXClickRestoreListener, mClickRestoreListener, mKeyAdListener, mClickAdListener, mKeyAd2Listener, mClickAd2Listener);
+        setClickListener(mXClickPlayListener, mClickPlayListener, mXClickRestoreListener, mClickRestoreListener, mKeyAdListener, mClickAdListener, mClickAd2Listener);
 
         ImageLoader imageLoader = ImageLoader.getInstance();
         imageLoader.displayImage(adImage, adLeft, Util.getImageLoaderOption(), new SimpleImageLoadingListener() {
@@ -120,7 +119,7 @@ public class Detail2DialogActivity extends Dialog {
 
     public Detail2DialogActivity(Context context,
                                  View.OnClickListener mClickPlayListener, View.OnKeyListener mXClickPlayListener, View.OnClickListener mClickRestoreListener, View.OnKeyListener mXClickRestoreListener,
-                                 View.OnClickListener mClickAdListener, Dialog.OnKeyListener mKeyAdListener, View.OnClickListener mClickAd2Listener, Dialog.OnKeyListener mKeyAd2Listener, String type, String adImage, String adImage2) {
+                                 View.OnClickListener mClickAdListener, Dialog.OnKeyListener mKeyAdListener, View.OnClickListener mClickAd2Listener, String type, String adImage, String adImage2) {
         super(context, android.R.style.Theme_Translucent_NoTitleBar);
         this.mClickPlayListener = mClickPlayListener;
         this.mXClickPlayListener = mXClickPlayListener;
@@ -128,7 +127,6 @@ public class Detail2DialogActivity extends Dialog {
         this.mXClickRestoreListener = mXClickRestoreListener;
         this.mKeyAdListener = mKeyAdListener;
         this.mClickAdListener = mClickAdListener;
-        this.mKeyAd2Listener = mKeyAd2Listener;
         this.mClickAd2Listener = mClickAd2Listener;
         this.type = type;
         this.mContext = context;
@@ -148,16 +146,14 @@ public class Detail2DialogActivity extends Dialog {
         return super.onKeyDown(keyCode, event);
     }
 
-    private void setClickListener(View.OnKeyListener x, View.OnClickListener x2, View.OnKeyListener x3, View.OnClickListener x4, Dialog.OnKeyListener x5, View.OnClickListener x6, Dialog.OnKeyListener x7, View.OnClickListener x8) {
-
+    private void setClickListener(View.OnKeyListener x, View.OnClickListener x2, View.OnKeyListener x3, View.OnClickListener x4, Dialog.OnKeyListener x5, View.OnClickListener x6, View.OnClickListener x7) {
         movieplay.setOnKeyListener(x);
         movieplay.setOnClickListener(x2);
         movieadd.setOnKeyListener(x3);
         movieadd.setOnClickListener(x4);
         setOnKeyListener(x5);
         adLeft.setOnClickListener(x6);
-        setOnKeyListener(x7);
-        adRight.setOnClickListener(x8);
+        adRight.setOnClickListener(x7);
     }
 
     /*

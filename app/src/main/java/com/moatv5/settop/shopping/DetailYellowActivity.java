@@ -79,7 +79,11 @@ public class DetailYellowActivity extends Activity{
 	    Intent intent = getIntent();
 		Bundle myBundle = intent.getExtras();
 		code = myBundle.getString("code");
-		
+		try{
+			code = myBundle.getString("code");
+			idx = myBundle.getString("idx");
+		}catch (Exception e){}
+
 		btnLeft = (ImageView) findViewById(R.id.arrowleft);
 		btnRight = (ImageView) findViewById(R.id.arrowright);
 		btnRight.setOnTouchListener(new View.OnTouchListener() {	
@@ -362,7 +366,11 @@ public class DetailYellowActivity extends Activity{
 	 		String strJson = "";
 			PostHttp postmake = new PostHttp();
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-			nameValuePairs.add(new BasicNameValuePair("idx", code));
+			if(!idx.equals("")){
+				nameValuePairs.add(new BasicNameValuePair("idx", idx));
+			}else {
+				nameValuePairs.add(new BasicNameValuePair("idx", code));
+			}
 			nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));
 			strJson = postmake.httpConnect(
 					Constant.mainUrl + "/module/tv/yellow_page_hit.php", nameValuePairs);
@@ -539,7 +547,11 @@ public class DetailYellowActivity extends Activity{
 			String strJson = "";
 			PostHttp postmake = new PostHttp();
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-			nameValuePairs.add(new BasicNameValuePair("code1", code));
+			if(!idx.equals("")){
+				nameValuePairs.add(new BasicNameValuePair("idx", idx));
+			}else {
+				nameValuePairs.add(new BasicNameValuePair("code1", code));
+			}
 			nameValuePairs.add(new BasicNameValuePair("start", String.valueOf(startIdx)));
 			nameValuePairs.add(new BasicNameValuePair("end", String.valueOf(endIdx)));
 			nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));

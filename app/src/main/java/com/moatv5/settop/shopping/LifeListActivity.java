@@ -53,7 +53,8 @@ import android.widget.Toast;
 public class LifeListActivity extends Activity {
 
 	private ShoppingCoverFlow coverFlow;
-	
+
+
 	private String mainid = null;
 	protected String subid = null;
 	private ArrayList<ShoppingList> broadcastList = null;
@@ -88,6 +89,7 @@ public class LifeListActivity extends Activity {
 	private ImageView btnMenu;
 	private String code1 = "";
 	private String code2 = "";
+	private String idx = "";
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -97,9 +99,13 @@ public class LifeListActivity extends Activity {
 	    mContext = this.getBaseContext();
 	    Intent intent = getIntent();
 		Bundle myBundle = intent.getExtras();
-		mainid = myBundle.getString("mainid");
-		subid =  myBundle.getString("subid");
-		code1 =  myBundle.getString("code1");
+		try{
+			mainid = myBundle.getString("mainid");
+			subid =  myBundle.getString("subid");
+			code1 =  myBundle.getString("code1");
+			idx = myBundle.getString("idx");
+		}catch (Exception e){}
+
 		
 		btnMenu = (ImageView)findViewById(R.id.menu);	
 		btnMenu.setOnTouchListener(new View.OnTouchListener() {	
@@ -964,7 +970,11 @@ public class LifeListActivity extends Activity {
 		String strJson = "";
 		PostHttp postmake = new PostHttp();
 		ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-		nameValuePairs.add(new BasicNameValuePair("code1", code1));
+		if(!idx.equals("")){
+			nameValuePairs.add(new BasicNameValuePair("idx", idx));
+		}else {
+			nameValuePairs.add(new BasicNameValuePair("code1", code1));
+		}
 		nameValuePairs.add(new BasicNameValuePair("code2", code2));
 		nameValuePairs.add(new BasicNameValuePair("start", String.valueOf(startIdx)));
 		nameValuePairs.add(new BasicNameValuePair("end", String.valueOf(endIdx)));

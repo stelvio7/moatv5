@@ -200,7 +200,7 @@ public class DetailShowActivity extends Activity {
                             }
                         } else {
 
-                            mCustomPopup2 = new Detail2DialogActivity(DetailShowActivity.this, xPop2PlayClickListener, xPop2PlayKeyListener, xPop2RestoreClickListener, xPop2RestoreKeyListener, mClickAdListener, mKeyAdListener, mClickAd2Listener, mKeyAd2Listener,"movie", adImage, adImage2);
+                            mCustomPopup2 = new Detail2DialogActivity(DetailShowActivity.this, xPop2PlayClickListener, xPop2PlayKeyListener, xPop2RestoreClickListener, xPop2RestoreKeyListener, mClickAdListener, mKeyAdListener, mClickAd2Listener,"movie", adImage, adImage2);
                             mCustomPopup2.requestWindowFeature(Window.FEATURE_NO_TITLE);
                             mCustomPopup2.getWindow().setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
                             if (!mCustomPopup2.isShowing())
@@ -263,6 +263,11 @@ public class DetailShowActivity extends Activity {
                     isClicked = true;
                     goAdActivity(adBannerIdx);
                 }
+            }else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+                if (!isClicked) {
+                    isClicked = true;
+                    goAdActivity(adBannerIdx2);
+                }
             }
             return false;
         }
@@ -280,20 +285,7 @@ public class DetailShowActivity extends Activity {
         }
     };
 
-    private Dialog.OnKeyListener mKeyAd2Listener = new Dialog.OnKeyListener() {
-        @Override
-        public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-            if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
-                if (!isClicked) {
-                    isClicked = true;
-                    goAdActivity(adBannerIdx2);
-                }
-            }
-            return false;
 
-        }
-
-    };
 
     private View.OnClickListener mClickAd2Listener = new View.OnClickListener() {
         @Override
@@ -308,13 +300,14 @@ public class DetailShowActivity extends Activity {
     };
 
     private void goAdActivity(String idx){
+        isClicked = false;
         if(adBannerType.equals("S")){
             Intent intent = new Intent(DetailShowActivity.this, ShoppingListActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             Bundle myData = new Bundle();
             myData.putString("mainid", "");
             myData.putString("subid", "");
-            myData.putString("code1", idx);
+            myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
         }else if(adBannerType.equals("D")){
@@ -323,14 +316,14 @@ public class DetailShowActivity extends Activity {
             Bundle myData = new Bundle();
             myData.putString("mainid", "");
             myData.putString("subid", "");
-            myData.putString("code1", idx);
+            myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
         }else if(adBannerType.equals("Y")){
             Intent intent = new Intent(DetailShowActivity.this, DetailYellowActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             Bundle myData = new Bundle();
-            myData.putString("code", idx);
+            myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
         }else if(adBannerType.equals("L")){
@@ -339,7 +332,7 @@ public class DetailShowActivity extends Activity {
             Bundle myData = new Bundle();
             myData.putString("mainid", "");
             myData.putString("subid", "");
-            myData.putString("code1", idx);
+            myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
         }

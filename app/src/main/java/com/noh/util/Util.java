@@ -243,6 +243,19 @@ public class Util {
 				year, month, date);
 	}
 
+	public static String getExDay(int day){
+		GregorianCalendar calendar = new GregorianCalendar();
+		calendar.add(Calendar.DATE, day);
+		int year = calendar.get(Calendar.YEAR);
+		// 월은 0~11로 리턴되기 때문에 1을 더한다.
+		int month = calendar.get(Calendar.MONTH) + 1;
+		int date = calendar.get(Calendar.DATE);
+
+		// 연월일 시분초를 주어진 포맷으로 출력
+		return String.format("%d-%02d-%02d",
+				year, month, date);
+	}
+
 	public static String getNowTime(){
 		GregorianCalendar calendar = new GregorianCalendar();
 		int amPm = calendar.get(Calendar.AM_PM);
