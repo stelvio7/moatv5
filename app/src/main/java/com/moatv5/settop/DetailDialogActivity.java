@@ -97,7 +97,10 @@ public class DetailDialogActivity extends Dialog{
    	   	txtStory.setText(story);
         
     }
-     
+
+    public DetailDialogActivity(){
+        super(null);
+    }
     
 
      

@@ -33,7 +33,7 @@
 			    android:layout_height="wrap_content"
 			    android:layout_alignBottom="@id/con1"
 			    android:layout_centerHorizontal="true"
-			    android:background="@anim/connect_x1"
+			    android:background="@drawable/connect_x1"
 			    />
 	    </RelativeLayout>
 	    <RelativeLayout 
@@ -61,7 +61,7 @@
 			    android:layout_height="wrap_content"
 			    android:layout_alignBottom="@id/con2"
 			    android:layout_centerHorizontal="true"
-			    android:background="@anim/connect_check"
+			    android:background="@drawable/connect_check"
 			    />
 	   </RelativeLayout>
 	</LinearLayout>

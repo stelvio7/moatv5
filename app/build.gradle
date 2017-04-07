@@ -1,6 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            keyAlias 'moatv5.keystore'
+            keyPassword 'lsspipsm'
+            storeFile file('moatv5.keystore')
+            storePassword 'lsspipsm'
+        }
+        release {
+            keyAlias 'moatv5.keystore'
+            keyPassword 'lsspipsm'
+            storeFile file('moatv5.keystore')
+            storePassword 'lsspipsm'
+        }
+    }
     compileSdkVersion 22
     buildToolsVersion "25.0.0"
 
@@ -8,6 +22,8 @@ android {
         applicationId "com.moatv5.settop"
         minSdkVersion 8
         targetSdkVersion 8
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {

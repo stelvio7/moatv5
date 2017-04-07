@@ -91,9 +91,7 @@ public class ListLiveActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-
                 goRight();
-
             }
         });
 
@@ -101,7 +99,6 @@ public class ListLiveActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-
                goLeft();
             }
         });
@@ -357,7 +354,6 @@ public class ListLiveActivity extends Activity {
         }
 
         protected void dismissProgress() {
-
             if (mProgress != null) {
                 mProgress.dismiss();
             }

@@ -74,7 +74,7 @@ public class Connect extends Activity{
         
         if(!Util.checkNetwordState(this.getBaseContext())){
         	contop1.setVisibility(View.GONE);
-        	imgConnect1.setBackgroundResource(R.anim.connect_x1);
+        	imgConnect1.setBackgroundResource(R.drawable.connect_x1);
         	frameAnimation1 = (AnimationDrawable) imgConnect1.getBackground();
         	frameAnimation1.start();
         	disconnected = true;
@@ -95,7 +95,7 @@ public class Connect extends Activity{
         }else{
         	contop1.setVisibility(View.GONE);
         	contop2.setVisibility(View.VISIBLE);
-        	imgConnect1.setBackgroundResource(R.anim.connect_check);
+        	imgConnect1.setBackgroundResource(R.drawable.connect_check);
         	frameAnimation1 = (AnimationDrawable) imgConnect1.getBackground();
         	frameAnimation1.start();
         	
@@ -249,7 +249,7 @@ public class Connect extends Activity{
     		// TODO Auto-generated method stub
     		if(success){
     			contop2.setVisibility(View.GONE);
-	        	imgConnect2.setBackgroundResource(R.anim.connect_check);
+	        	imgConnect2.setBackgroundResource(R.drawable.connect_check);
 	        	frameAnimation2 = (AnimationDrawable) imgConnect2.getBackground();
 	        	frameAnimation2.start();
 	        	
@@ -268,7 +268,7 @@ public class Connect extends Activity{
     				contop2.setVisibility(View.GONE);
     				disconnected = true;
     				Log.e(null, "xxxx33x");
-    				imgConnect2.setBackgroundResource(R.anim.connect_x2);
+    				imgConnect2.setBackgroundResource(R.drawable.connect_x2);
 		        	frameAnimation2 = (AnimationDrawable) imgConnect2.getBackground();
 		        	frameAnimation2.start();
     			}

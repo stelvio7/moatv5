@@ -8,7 +8,7 @@ import android.view.Display;
 import android.view.WindowManager;
 import android.widget.VideoView;
 
-class FullVideoView extends VideoView
+public class FullVideoView extends VideoView
 {
 
 	protected int overrideWidth = 480;

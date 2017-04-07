@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal" android:background="@drawable/batang">
+    android:orientation="horizontal" android:background="@drawable/bg">
 	
 	<ImageView
 	    android:id="@+id/tel"
@@ -86,64 +86,93 @@
 	    android:orientation="vertical" >
 
 		<ImageView
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:layout_marginBottom="15dp"
-		    android:layout_marginRight="15dp"
-		    android:layout_weight="0.6"
-		    android:layout_gravity="center"
-		    android:src="@drawable/payment_banner" />
+			android:id="@+id/imageView2"
+			android:layout_weight="0.7"
+			android:layout_marginTop="50dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginRight="15dp"
+			android:src="@drawable/payment_banner" />
 
-	    <LinearLayout
-		    android:layout_width="400dp"
-		    android:layout_height="wrap_content"
-		    android:layout_centerInParent="true"
-		    android:orientation="horizontal" 
-		    android:layout_weight="0.1"
-		    android:layout_gravity="center">
-		    <EditText
-		        android:id="@+id/rechargeNum1"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1" 
-		        android:layout_marginRight="10dp"
-		        android:maxLength="4"
-		        android:gravity="center"
-		        android:maxLines="1"/>
-		    <EditText
-		        android:id="@+id/rechargeNum2"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1" 
-		        android:layout_marginRight="10dp"
-		        android:maxLength="4"
-		        android:maxLines="1"
-		        android:gravity="center"/>
-		    <EditText
-		        android:id="@+id/rechargeNum3"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1" 
-		        android:layout_marginRight="10dp"
-		        android:maxLength="4"
-		        android:maxLines="1"
-		        android:gravity="center"/>
-		    <EditText
-		        android:id="@+id/rechargeNum4"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1" 
-		        android:maxLength="4"
-		        android:maxLines="1"
-		        android:gravity="center"/>
-		    </LinearLayout>
-	    <ImageView
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginBottom="80dp"
-	        android:layout_weight="0.3"
-	        android:src="@drawable/image_payment_help" 
-	        android:layout_gravity="top"/>
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="75dp"
+				android:paddingRight="66dp"
+				android:gravity="center_vertical"
+				android:layout_centerInParent="true"
+				android:orientation="horizontal"
+				android:layout_gravity="center"
+				android:background="@drawable/payment_text" >
+				<EditText
+					android:id="@+id/rechargeNum1"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:layout_weight="1"
+					android:layout_marginRight="40dp"
+					android:maxLength="4"
+					android:textSize="26sp"
+					android:textColor="#FFFFFF"
+					android:background="@null"
+					android:gravity="center"
+					android:maxLines="1"/>
+				<EditText
+					android:id="@+id/rechargeNum2"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:layout_weight="1"
+					android:layout_marginRight="30dp"
+					android:textSize="26sp"
+					android:maxLength="4"
+					android:textColor="#FFFFFF"
+					android:background="@null"
+					android:maxLines="1"
+					android:gravity="center"/>
+				<EditText
+					android:id="@+id/rechargeNum3"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:layout_weight="1"
+					android:layout_marginRight="30dp"
+					android:textSize="26sp"
+					android:maxLength="4"
+					android:textColor="#FFFFFF"
+					android:background="@null"
+					android:maxLines="1"
+					android:gravity="center"/>
+
+				<EditText
+					android:id="@+id/rechargeNum4"
+					android:layout_width="match_parent"
+					android:layout_height="40dp"
+					android:layout_marginRight="20dp"
+					android:textSize="26sp"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:maxLength="4"
+					android:textColor="#FFFFFF"
+					android:background="@null"
+					android:maxLines="1" />
+				<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@drawable/payment_ok_button"/>
+			</LinearLayout>
+
+			<ImageView
+				android:id="@+id/imageView3"
+                android:layout_marginTop="2dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="top"
+				android:src="@drawable/image_payment_help" />
+		</LinearLayout>
 	</LinearLayout>
 
 </RelativeLayout>
