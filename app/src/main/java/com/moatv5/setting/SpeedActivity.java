@@ -1,13 +1,33 @@
 package com.moatv5.setting;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.moatv5.model.BroadcastList;
+import com.moatv5.model.Constant;
+import com.moatv5.model.Server;
+import com.moatv5.settop.R;
+import com.noh.util.ImageDownloader;
+import com.noh.util.PostHttp;
+import com.noh.util.Util;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -15,32 +35,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.moatv5.model.BroadcastList;
-import com.moatv5.model.Constant;
-import com.moatv5.settop.R;
-import com.noh.util.ImageDownloader;
-import com.noh.util.PostHttp;
-import com.noh.util.Util;
-
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.Spinner;
-import android.widget.TextView;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.TimerTask;
 
 public class SpeedActivity extends Activity {
     /**
@@ -69,11 +70,12 @@ public class SpeedActivity extends Activity {
 
     public String videoUrl = "";
     public int idxServer = 0;
-    public ArrayList<String> serverList = new ArrayList<String>();
-    public ArrayList<String> videoList = new ArrayList<String>();
+    private ArrayList<Server> serverList = new ArrayList<Server>();
+    private ArrayList<String> strServerList = new ArrayList<String>();
     private ProgressBar progressBar1;
     private int backWidth;
     public ImageView speedback;
+    private boolean isfirst = true;
 
     public SpeedActivity() {
     }
@@ -120,6 +122,9 @@ public class SpeedActivity extends Activity {
         btnSelectServer = (Button) findViewById(R.id.btnSelectServer);
         txtSpeed = (TextView) findViewById(R.id.txtSpeed);
         btnSpeedCheck.requestFocus();
+
+
+
         VideoTask videoTask = new VideoTask(getBaseContext());
         videoTask.execute();
 
@@ -203,7 +208,8 @@ public class SpeedActivity extends Activity {
             try {
                 Thread.sleep(100);
 
-                URL url = new URL(videoList.get(idxServer));
+                URL url = new URL("http://" + serverList.get(idxServer).getDomain() + "/movie/old/o_199107060.mp4");
+                //Log.d("dd", "http://" + serverList.get(idxServer).getDomain() + "/movie/old/o_199107060.mp4");
                 URLConnection conexion = url.openConnection();
                 conexion.connect();
 
@@ -235,7 +241,7 @@ public class SpeedActivity extends Activity {
                 speed = result / (float) 1000;
                 Log.e(null, "time:" + (500000 / diffTime));
                 if (result <= 0) {
-                    return 2L;
+                    return 1L;
                 } else if (result <= 1000) {
                     result = result * ((float) 453 / (float) 1000);
                     //Log.e(null, "result:" + result);
@@ -262,10 +268,10 @@ public class SpeedActivity extends Activity {
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                return 35L;
+                return 1L;
             } catch (IOException e) {
                 e.printStackTrace();
-                return 35L;
+                return 1L;
             }
 
             // 수행이 끝나고 리턴하는 값은 다음에 수행될 onProgressUpdate 의 파라미터가 된다
@@ -292,6 +298,70 @@ public class SpeedActivity extends Activity {
         protected void onCancelled() {
             // TODO Auto-generated method stub
             super.onCancelled();
+        }
+    }
+
+
+
+    class GetNowTask extends AsyncTask<String, Integer, Boolean> {
+        private Context mContext;
+        boolean success = false;
+
+        public GetNowTask(Context context) {
+            mContext = context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            // TODO Auto-generated method stub
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Boolean doInBackground(String... params) {
+            // TODO Auto-generated method stub
+            boolean loginSuccess = false;
+            String strJson = "";
+            PostHttp postmake = new PostHttp();
+            ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+            nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));
+
+            strJson = postmake.httpConnect(
+                        /*Constant.mainUrl + */Constant.mainUrl + "/module/tv/member.php", nameValuePairs);
+            try {
+                JSONObject json_data = new JSONObject(strJson);
+                int idx = Integer.parseInt(json_data.getString("live_server"));
+
+                idxServer =idx;
+                Log.d("", "idx" + idxServer);
+                loginSuccess = true;
+            } catch (JSONException e) {
+            }
+            if (loginSuccess)
+                return true;
+            else
+                return false;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            // TODO Auto-generated method stub
+            if (result) {
+
+            }
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            // TODO Auto-generated method stub
+            //	mImageView.scrollTo(mScrollStep++, 0);
+        }
+
+        @Override
+        protected void onCancelled() {
+            // TODO Auto-generated method stub
+            super.onCancelled();
+
         }
     }
 
@@ -325,8 +395,12 @@ public class SpeedActivity extends Activity {
                 for (int i = 0; i < jArray.length(); i++) {
                     BroadcastList tempList = new BroadcastList();
                     JSONObject json_data = jArray.getJSONObject(i);
-                    serverList.add(json_data.getString("name"));
-                    videoList.add(json_data.getString("ip"));
+                    Server serverData = new Server();
+                    serverData.setCode(json_data.getString("code"));
+                    serverData.setDomain(json_data.getString("domain"));
+                    serverData.setName(json_data.getString("name"));
+                    strServerList.add(serverData.getName());
+                    serverList.add(serverData);
                     loginSuccess = true;
                 }
             } catch (JSONException e) {
@@ -340,9 +414,33 @@ public class SpeedActivity extends Activity {
         @Override
         protected void onPostExecute(Boolean result) {
             // TODO Auto-generated method stub
+
             if (result) {
                 btnSpeedCheck.setVisibility(View.VISIBLE);
-                txtServer.setAdapter(new ArrayAdapter<String>(SpeedActivity.this, R.layout.spinner_item, serverList));
+                txtServer.setAdapter(new ArrayAdapter<String>(SpeedActivity.this, R.layout.spinner_item, strServerList));
+
+                txtServer.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                        @Override
+                                                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                                            idxServer = position;
+                                                            Log.d("", "set" + idxServer);
+                                                            if(!isfirst) {
+                                                                SelectTask downloadTask = new SelectTask(getBaseContext());
+                                                                downloadTask.execute();
+                                                            }
+                                                            isfirst = false;
+                                                        }
+                                                        @Override
+                                                        public void onNothingSelected(AdapterView<?> parent) {
+
+                                                        }
+                                                    }
+                );
+                if(isfirst) {
+                    GetNowTask getTask = new GetNowTask(getBaseContext());
+                    getTask.execute();
+                }
+
                 btnSelectServer.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View arg0) {
@@ -358,9 +456,76 @@ public class SpeedActivity extends Activity {
                         downloadTask.execute();
                     }
                 });
-
                 //txtServer.setText(serverList.get(idxServer));
+            }
+        }
 
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            // TODO Auto-generated method stub
+            //	mImageView.scrollTo(mScrollStep++, 0);
+        }
+
+        @Override
+        protected void onCancelled() {
+            // TODO Auto-generated method stub
+            super.onCancelled();
+
+        }
+    }
+
+    class SelectTask extends AsyncTask<String, Integer, Boolean> {
+        private Context mContext;
+        boolean success = false;
+
+        public SelectTask(Context context) {
+            mContext = context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            // TODO Auto-generated method stub
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Boolean doInBackground(String... params) {
+            // TODO Auto-generated method stub
+            String strJson = "";
+            PostHttp postmake = new PostHttp();
+            ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+            nameValuePairs.add(new BasicNameValuePair("vod_server", serverList.get(idxServer).getCode()));
+            nameValuePairs.add(new BasicNameValuePair("live_server", serverList.get(idxServer).getCode()));
+            nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));
+
+            strJson = postmake.httpConnect(
+                        Constant.mainUrl + "/module/tv/member_server_proc.php", nameValuePairs);
+            try {
+                JSONObject json_data = new JSONObject(strJson);
+                if(json_data.getString("result").equals("Y")){
+                    success = true;
+                }
+            } catch (JSONException e) {
+            }
+            if (success)
+                return true;
+            else
+                return false;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            // TODO Auto-generated method stub
+            if (result) {
+                AlertDialog.Builder alt_bld = new AlertDialog.Builder(SpeedActivity.this);
+                alt_bld.setMessage(R.string.serverchanged);
+                alt_bld.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alert = alt_bld.create();
+                alert.show();
             }
         }
 

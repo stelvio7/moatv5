@@ -23,7 +23,11 @@ public class BroadcastList {
     private String code2;
     
     private String wIdx;
-    
+
+	private String nowTitle;
+	private String nowTime;
+	private String nextTitle;
+	private String nextTime;
     
     
 	
@@ -136,6 +140,39 @@ public class BroadcastList {
 	public void setPu_no(String pu_no) {
 		this.pu_no = pu_no;
 	}
+
+	public String getNowTitle() {
+		return nowTitle;
+	}
+
+	public void setNowTitle(String nowTitle) {
+		this.nowTitle = nowTitle;
+	}
+
+	public String getNowTime() {
+		return nowTime;
+	}
+
+	public void setNowTime(String nowTime) {
+		this.nowTime = nowTime;
+	}
+
+	public String getNextTitle() {
+		return nextTitle;
+	}
+
+	public void setNextTitle(String nextTitle) {
+		this.nextTitle = nextTitle;
+	}
+
+	public String getNextTime() {
+		return nextTime;
+	}
+
+	public void setNextTime(String nextTime) {
+		this.nextTime = nextTime;
+	}
+
 	public void recyleBitmap(){
 		if(bitmap != null){
 			this.bitmap.recycle();

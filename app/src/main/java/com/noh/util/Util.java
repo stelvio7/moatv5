@@ -1,17 +1,5 @@
 package com.noh.util; 
 
-import java.io.BufferedReader;   
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.UUID;
-
-import com.moatv5.settop.R;
-import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,6 +12,19 @@ import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
+
+import com.moatv5.settop.R;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.UUID;
 public class Util {
 	
 	/*public static String getMacAddress(Context context) {
@@ -150,7 +151,8 @@ public class Util {
 	public static String getMacAddress(Context context){ 
 		SharedPreferences sp = context.getSharedPreferences(Util.getApplicationName(context), Context.MODE_PRIVATE);
 		//return sp.getString("uuid", "");
-		return "00000000-4e1d-ffad-9276-b54e0033c587";
+		return "00000000-07fd-42f7-ffff-ffff99d603a9";
+		//return "00000000-4e1d-ffad-9276-b54e0033c587";
 	} 
 	
 	public static void setMacAddress(Context context){ 

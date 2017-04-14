@@ -1,24 +1,5 @@
 package com.moatv5.setting;
 
-import java.util.ArrayList;  
-
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.moatv5.settop.R;
-import com.moatv5.settop.R.drawable;
-import com.moatv5.settop.R.id;
-import com.moatv5.settop.R.layout;
-import com.moatv5.settop.R.string;
-import com.moatv5.model.Constant;
-import com.noh.util.ImageDownloader;
-import com.noh.util.PostHttp;
-import com.noh.util.Util;
-
-import android.view.View;
-import android.view.View.OnKeyListener; 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -30,9 +11,24 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.moatv5.model.Constant;
+import com.moatv5.settop.R;
+import com.noh.util.ImageDownloader;
+import com.noh.util.PostHttp;
+import com.noh.util.Util;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class RechargeActivity extends Activity {
     /** Called when the activity is first created. */
@@ -41,6 +37,7 @@ public class RechargeActivity extends Activity {
 	private EditText regargeNum2;
 	private EditText regargeNum3;
 	private EditText regargeNum4;
+	private Button rechargeok;
 	private SendRechargeTask sendRechargeTask= null;
 	private ProgressDialog mProgress;
 	private Button expireText;
@@ -78,6 +75,7 @@ public class RechargeActivity extends Activity {
         regargeNum2 =  (EditText) findViewById(R.id.rechargeNum2);
         regargeNum3 =  (EditText) findViewById(R.id.rechargeNum3);
         regargeNum4 =  (EditText) findViewById(R.id.rechargeNum4);
+		rechargeok = (Button)findViewById(R.id.rechargeok);
         expireText = (Button) findViewById(R.id.imgExpireDate);
         regargeNum1.requestFocus();
         expireText2 = (Button) findViewById(R.id.imgExpireDate2);
@@ -85,6 +83,15 @@ public class RechargeActivity extends Activity {
         	expireText.setText(getExpireDate().substring(0, 2));
         	expireText2.setText(getExpireDate().substring(2, 4));
         }
+
+		rechargeok.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				clickOkButton();
+			}
+		});
+
         regargeNum1.setInputType(InputType.TYPE_CLASS_NUMBER
         		 |InputType.TYPE_NUMBER_FLAG_DECIMAL);
         regargeNum1.setOnKeyListener(new OnKeyListener() {           

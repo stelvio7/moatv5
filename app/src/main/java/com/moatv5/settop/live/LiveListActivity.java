@@ -1,18 +1,32 @@
 package com.moatv5.settop.live;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.moatv5.model.BroadcastList;
 import com.moatv5.model.Constant;
-import com.moatv5.setting.SearchActivity;
 import com.moatv5.settop.R;
 import com.moatv5.settop.VideoViewActivity;
 import com.noh.util.ImageDownloader;
@@ -22,34 +36,14 @@ import com.noh.util.Util;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.DialogInterface.OnCancelListener;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.TimerTask;
 
 public class LiveListActivity extends Activity {
 
@@ -84,6 +78,11 @@ public class LiveListActivity extends Activity {
 	private Context mContext = null;
 	private ImageAdapter imageAdapter = null;
 	private boolean isClicked = false;
+
+	private TextView nowTitle;
+	private TextView nowTime;
+	private TextView nextTitle;
+	private TextView nextTime;
 	
 	private TimerTask timerTask;
 	//private ImageView btnLeft = null;
@@ -122,7 +121,11 @@ public class LiveListActivity extends Activity {
         imgNet = (ImageView)findViewById(R.id.imgNet);
         if(!Util.checkNetwordState(mContext))
         	imgNet.setBackgroundResource(R.drawable.image_main_net_off);
-        
+
+		nowTitle = (TextView)findViewById(R.id.nowTitle);
+		nowTime = (TextView)findViewById(R.id.nowTime);
+		nextTitle = (TextView)findViewById(R.id.nextTitle);
+		nextTime = (TextView)findViewById(R.id.nextTime);
         
         for(int i = 0; i < detailshowbtn.length; i++){
         	detailshowbtn[i] = (ImageView)findViewById(detailshowbtnRes[i]);
@@ -339,9 +342,14 @@ public class LiveListActivity extends Activity {
 				tempList.setIdx(json_data.getString("idx"));
 				tempList.setVod_code(json_data.getString("vod_code"));
 				tempList.setImage(json_data.getString("image"));
-
 				tempList.setTitle(json_data.getString("title"));
 				tempList.setPu_no(json_data.getString("pu_no"));
+
+				tempList.setNowTitle(json_data.getString("now_title"));
+				tempList.setNowTime(json_data.getString("now_time"));
+				tempList.setNextTitle(json_data.getString("next_title"));
+				tempList.setNextTime(json_data.getString("next_time"));
+
 				//list.add(tempList);
 				liveList.add(i, tempList);
 			}
@@ -351,7 +359,12 @@ public class LiveListActivity extends Activity {
 	}
 	
 	private void setCoverflowData(){
-		
+		if(liveList.size() > 0) {
+			nowTitle.setText(liveList.get(0).getNowTitle());
+			nowTime.setText("(" + liveList.get(0).getNowTime() + ")");
+			nextTitle.setText(liveList.get(0).getNextTitle());
+			nextTime.setText("(" + liveList.get(0).getNextTime() + ")");
+		}
 		 for(int i = 0; i < liveList.size(); i++){
 			 detailshowbtn[i].setFocusable(true);
 			 
@@ -362,7 +375,10 @@ public class LiveListActivity extends Activity {
 		            		for(int j = 0; j < liveList.size(); j++)
 		            			if(v == detailshowbtn[j])	{
 		            				borders[j].setVisibility(View.VISIBLE);
-		            				//coverTextView.setText(broadcastList.get(pageIdx*12 + j).getTitle());
+		            				nowTitle.setText(liveList.get(j).getNowTitle());
+									nowTime.setText("(" + liveList.get(j).getNowTime() + ")");
+									nextTitle.setText(liveList.get(j).getNextTitle());
+									nextTime.setText("(" + liveList.get(j).getNextTime() + ")");
 		            			}
 		    			}else{
 		    				for(int j = 0; j < liveList.size(); j++)
@@ -733,6 +749,7 @@ public class LiveListActivity extends Activity {
     	@Override
     	protected void onPostExecute(Long result) {
     		// TODO Auto-generated method stub
+
     		Log.i(null, "url" + vod_url + " :idx:"+ liveList.get(position).getIdx());
     		checkPlay(result_code, vod_url, liveList.get(position).getIdx());
     		isClicked = false;
@@ -869,7 +886,6 @@ public class LiveListActivity extends Activity {
     	
     	 
     	protected void showProgress() {
-    		Log.e(null, "dddd");
     		mProgress = new ProgressDialog(LiveListActivity.this);
     		mProgress.setCancelable(true);
             mProgress.setOnCancelListener(new OnCancelListener() {

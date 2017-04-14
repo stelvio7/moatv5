@@ -1,15 +1,31 @@
 package com.moatv5.setting;
 
-import java.util.ArrayList;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager.LayoutParams;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.moatv5.settop.MovieListActivity;
-import com.moatv5.settop.R;
 import com.moatv5.model.BroadcastList;
 import com.moatv5.model.Constant;
 import com.moatv5.settop.CoverFlow;
@@ -17,6 +33,7 @@ import com.moatv5.settop.Detail2DialogActivity;
 import com.moatv5.settop.DetailDialogActivity;
 import com.moatv5.settop.DetailDramaActivity;
 import com.moatv5.settop.DetailShowActivity;
+import com.moatv5.settop.R;
 import com.moatv5.settop.VideoViewActivity;
 import com.moatv5.settop.delivery.DeliveryListActivity;
 import com.moatv5.settop.live.LiveCoverFlow;
@@ -27,32 +44,15 @@ import com.noh.util.ImageDownloader;
 import com.noh.util.PostHttp;
 import com.noh.util.UrlImageLoader;
 import com.noh.util.Util;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
-import android.app.Dialog;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.DialogInterface.OnCancelListener;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.WindowManager.LayoutParams;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class RestoreActivity extends Activity {
     /**
@@ -103,6 +103,8 @@ public class RestoreActivity extends Activity {
         ivTel = (ImageView) findViewById(R.id.tel);
         //ivTel.setImageResource(R.drawable.image_main_logo);
         imageDownloader.download(Constant.mainUrl + "/image/info_tel.png", (ImageView) ivTel);
+
+        ImageLoader.getInstance().init(Util.getConfig(mContext));
 
         imgLock = (ImageView) findViewById(R.id.imgLock);
         if (!Util.getChildset(mContext))

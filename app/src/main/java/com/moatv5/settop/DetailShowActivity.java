@@ -1,14 +1,28 @@
 package com.moatv5.settop;
 
-import java.util.ArrayList;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
+import android.view.Window;
+import android.view.WindowManager.LayoutParams;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.moatv5.settop.R;
 import com.moatv5.model.BroadcastList;
 import com.moatv5.model.Constant;
 import com.moatv5.model.DramaContent;
@@ -20,28 +34,13 @@ import com.noh.util.ImageDownloader;
 import com.noh.util.PostHttp;
 import com.noh.util.Util;
 
-import android.app.Dialog;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.view.Window;
-import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
-import android.view.WindowManager.LayoutParams;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.DialogInterface.OnCancelListener;
-import android.os.AsyncTask;
-import android.os.Bundle;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class DetailShowActivity extends Activity {
     /**
@@ -463,7 +462,7 @@ public class DetailShowActivity extends Activity {
                 dramaContent.setVod_type(json_data.getString("vod_type"));
                 dramaContent.setVod_code(json_data.getString("vod_code"));
                 dramaContent.setWatch(json_data.getString("watch"));
-
+                dramaContent.setSubid("broadcast");
                 nowShowList.add(dramaContent);
             }
         } catch (JSONException e) {
@@ -706,6 +705,7 @@ public class DetailShowActivity extends Activity {
         myData.putString("videourl", strUrl);
         myData.putString("mainid", mainid);
         myData.putString("subid", subid);
+        intent.putParcelableArrayListExtra("dramadata", nowShowList);
         intent.putExtras(myData);
         startActivity(intent);
     }
@@ -851,7 +851,7 @@ public class DetailShowActivity extends Activity {
             ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 
             nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));
-            nameValuePairs.add(new BasicNameValuePair("type", "F"));
+            nameValuePairs.add(new BasicNameValuePair("type", "V"));
             strJson = postmake.httpConnect(
                     Constant.mainUrl + "/module/tv/playerbanner.php", nameValuePairs);
             JSONArray jArray = null;
@@ -917,7 +917,7 @@ public class DetailShowActivity extends Activity {
             ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 
             nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));
-            nameValuePairs.add(new BasicNameValuePair("type", "F"));
+            nameValuePairs.add(new BasicNameValuePair("type", "V"));
             strJson = postmake.httpConnect(
                     Constant.mainUrl + "/module/tv/playerbanner.php", nameValuePairs);
             JSONArray jArray = null;

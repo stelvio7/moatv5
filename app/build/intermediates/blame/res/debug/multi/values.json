@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "E:\\oldData\\201703android\\moatv5_0328\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,14 +11,7 @@
                     "endOffset": 88
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 46,
-                        "startColumn": 1,
-                        "startOffset": 2120,
-                        "endColumn": 34,
-                        "endOffset": 2153
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 124
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 44,
-                        "startColumn": 1,
-                        "startOffset": 2024,
-                        "endColumn": 32,
-                        "endOffset": 2055
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 192
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 1,
-                        "startOffset": 1229,
-                        "endColumn": 64,
-                        "endOffset": 1292
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 235
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 311,
-                        "endColumn": 42,
-                        "endOffset": 349
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 290
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 1,
-                        "startOffset": 540,
-                        "endColumn": 51,
-                        "endOffset": 590
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -106,14 +71,7 @@
                     "endOffset": 352
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 1,
-                        "startOffset": 651,
-                        "endColumn": 58,
-                        "endOffset": 708
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -125,14 +83,7 @@
                     "endOffset": 414
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 1,
-                        "startOffset": 711,
-                        "endColumn": 58,
-                        "endOffset": 768
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -144,14 +95,7 @@
                     "endOffset": 474
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 1,
-                        "startOffset": 593,
-                        "endColumn": 56,
-                        "endOffset": 648
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -163,14 +107,7 @@
                     "endOffset": 534
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 1,
-                        "startOffset": 352,
-                        "endColumn": 56,
-                        "endOffset": 407
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -182,14 +119,7 @@
                     "endOffset": 598
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 1,
-                        "startOffset": 824,
-                        "endColumn": 60,
-                        "endOffset": 883
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -201,14 +131,7 @@
                     "endOffset": 663
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 1,
-                        "startOffset": 410,
-                        "endColumn": 61,
-                        "endOffset": 470
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -220,14 +143,7 @@
                     "endOffset": 729
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 1,
-                        "startOffset": 473,
-                        "endColumn": 62,
-                        "endOffset": 534
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -239,14 +155,7 @@
                     "endOffset": 801
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 1,
-                        "startOffset": 886,
-                        "endColumn": 68,
-                        "endOffset": 953
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -258,14 +167,7 @@
                     "endOffset": 853
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 1,
-                        "startOffset": 1127,
-                        "endColumn": 48,
-                        "endOffset": 1174
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -277,14 +179,7 @@
                     "endOffset": 890
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 43,
-                        "startColumn": 1,
-                        "startOffset": 1989,
-                        "endColumn": 33,
-                        "endOffset": 2021
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -296,14 +191,7 @@
                     "endOffset": 934
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 45,
-                        "startColumn": 1,
-                        "startOffset": 2058,
-                        "endColumn": 60,
-                        "endOffset": 2117
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -315,14 +203,7 @@
                     "endOffset": 975
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 49,
-                        "startColumn": 1,
-                        "startOffset": 2195,
-                        "endColumn": 57,
-                        "endOffset": 2251
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -334,14 +215,7 @@
                     "endOffset": 1037
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 248,
-                        "endColumn": 61,
-                        "endOffset": 305
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -353,14 +227,7 @@
                     "endOffset": 1099
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 1,
-                        "startOffset": 1361,
-                        "endColumn": 58,
-                        "endOffset": 1418
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -372,14 +239,7 @@
                     "endOffset": 1141
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 36,
-                        "startColumn": 1,
-                        "startOffset": 1688,
-                        "endColumn": 38,
-                        "endOffset": 1725
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -391,14 +251,7 @@
                     "endOffset": 1183
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 35,
-                        "startColumn": 1,
-                        "startOffset": 1648,
-                        "endColumn": 38,
-                        "endOffset": 1685
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -410,14 +263,7 @@
                     "endOffset": 1225
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 1,
-                        "startOffset": 1528,
-                        "endColumn": 38,
-                        "endOffset": 1565
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -429,14 +275,7 @@
                     "endOffset": 1267
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 34,
-                        "startColumn": 1,
-                        "startOffset": 1608,
-                        "endColumn": 38,
-                        "endOffset": 1645
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -448,14 +287,7 @@
                     "endOffset": 1309
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 1,
-                        "startOffset": 1568,
-                        "endColumn": 38,
-                        "endOffset": 1605
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -467,14 +299,7 @@
                     "endOffset": 1353
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 31,
-                        "startColumn": 1,
-                        "startOffset": 1486,
-                        "endColumn": 40,
-                        "endOffset": 1525
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -482,17 +307,17 @@
                     "startLine": 27,
                     "startColumn": 4,
                     "startOffset": 1358,
-                    "endColumn": 34,
-                    "endOffset": 1388
+                    "endColumn": 47,
+                    "endOffset": 1401
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 54,
+                        "startLine": 60,
                         "startColumn": 1,
-                        "startOffset": 2387,
-                        "endColumn": 31,
-                        "endOffset": 2417
+                        "startOffset": 2628,
+                        "endColumn": 44,
+                        "endOffset": 2671
                     }
                 }
             },
@@ -500,132 +325,90 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1393,
-                    "endColumn": 65,
-                    "endOffset": 1454
+                    "startOffset": 1406,
+                    "endColumn": 34,
+                    "endOffset": 1436
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 1,
-                        "startOffset": 1815,
-                        "endColumn": 62,
-                        "endOffset": 1876
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1459,
-                    "endColumn": 66,
-                    "endOffset": 1521
+                    "startOffset": 1441,
+                    "endColumn": 65,
+                    "endOffset": 1502
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 1,
-                        "startOffset": 1421,
-                        "endColumn": 63,
-                        "endOffset": 1483
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 1526,
-                    "endColumn": 48,
-                    "endOffset": 1570
+                    "startOffset": 1507,
+                    "endColumn": 66,
+                    "endOffset": 1569
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 38,
-                        "startColumn": 1,
-                        "startOffset": 1768,
-                        "endColumn": 45,
-                        "endOffset": 1812
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1575,
+                    "startOffset": 1574,
                     "endColumn": 48,
-                    "endOffset": 1619
+                    "endOffset": 1618
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 56,
-                        "startColumn": 1,
-                        "startOffset": 2480,
-                        "endColumn": 45,
-                        "endOffset": 2524
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1624,
-                    "endColumn": 51,
-                    "endOffset": 1671
+                    "startOffset": 1623,
+                    "endColumn": 48,
+                    "endOffset": 1667
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 1,
-                        "startOffset": 1077,
-                        "endColumn": 48,
-                        "endOffset": 1124
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 1676,
-                    "endColumn": 33,
-                    "endOffset": 1705
+                    "startOffset": 1672,
+                    "endColumn": 51,
+                    "endOffset": 1719
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 1,
-                        "startOffset": 956,
-                        "endColumn": 30,
-                        "endOffset": 985
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 1710,
-                    "endColumn": 40,
-                    "endOffset": 1746
+                    "startOffset": 1724,
+                    "endColumn": 46,
+                    "endOffset": 1766
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 51,
+                        "startLine": 59,
                         "startColumn": 1,
-                        "startOffset": 2313,
-                        "endColumn": 37,
-                        "endOffset": 2349
+                        "startOffset": 2583,
+                        "endColumn": 43,
+                        "endOffset": 2625
                     }
                 }
             },
@@ -633,306 +416,229 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 1751,
-                    "endColumn": 40,
-                    "endOffset": 1787
+                    "startOffset": 1771,
+                    "endColumn": 33,
+                    "endOffset": 1800
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 50,
-                        "startColumn": 1,
-                        "startOffset": 2254,
-                        "endColumn": 57,
-                        "endOffset": 2310
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 1792,
-                    "endColumn": 47,
-                    "endOffset": 1835
+                    "startOffset": 1805,
+                    "endColumn": 40,
+                    "endOffset": 1841
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 1,
-                        "startOffset": 988,
-                        "endColumn": 44,
-                        "endOffset": 1031
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 1840,
-                    "endColumn": 67,
-                    "endOffset": 1903
+                    "startOffset": 1846,
+                    "endColumn": 40,
+                    "endOffset": 1882
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 1,
-                        "startOffset": 1295,
-                        "endColumn": 64,
-                        "endOffset": 1358
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 1908,
-                    "endColumn": 49,
-                    "endOffset": 1953
+                    "startOffset": 1887,
+                    "endColumn": 47,
+                    "endOffset": 1930
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 1,
-                        "startOffset": 1879,
-                        "endColumn": 46,
-                        "endOffset": 1924
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 1958,
-                    "endColumn": 41,
-                    "endOffset": 1995
+                    "startOffset": 1935,
+                    "endColumn": 67,
+                    "endOffset": 1998
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 37,
-                        "startColumn": 1,
-                        "startOffset": 1728,
-                        "endColumn": 38,
-                        "endOffset": 1765
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 2000,
-                    "endColumn": 37,
-                    "endOffset": 2033
+                    "startOffset": 2003,
+                    "endColumn": 49,
+                    "endOffset": 2048
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 47,
-                        "startColumn": 1,
-                        "startOffset": 2156,
-                        "endColumn": 34,
-                        "endOffset": 2189
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 2038,
-                    "endColumn": 63,
-                    "endOffset": 2097
+                    "startOffset": 2053,
+                    "endColumn": 41,
+                    "endOffset": 2090
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 2,
-                        "startOffset": 175,
-                        "endColumn": 61,
-                        "endOffset": 234
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 2102,
-                    "endColumn": 49,
-                    "endOffset": 2147
+                    "startOffset": 2095,
+                    "endColumn": 54,
+                    "endOffset": 2145
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 3,
-                        "startOffset": 776,
-                        "endColumn": 48,
-                        "endOffset": 821
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 2152,
-                    "endColumn": 55,
-                    "endOffset": 2203
+                    "startOffset": 2150,
+                    "endColumn": 37,
+                    "endOffset": 2183
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 2,
-                        "startOffset": 120,
-                        "endColumn": 53,
-                        "endOffset": 171
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2208,
-                    "endColumn": 65,
-                    "endOffset": 2269
+                    "startOffset": 2188,
+                    "endColumn": 63,
+                    "endOffset": 2247
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 2,
-                        "startOffset": 55,
-                        "endColumn": 63,
-                        "endOffset": 116
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2274,
-                    "endColumn": 40,
-                    "endOffset": 2310
+                    "startOffset": 2252,
+                    "endColumn": 49,
+                    "endOffset": 2297
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 42,
-                        "startColumn": 1,
-                        "startOffset": 1930,
-                        "endColumn": 57,
-                        "endOffset": 1986
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2315,
-                    "endColumn": 61,
-                    "endOffset": 2372
+                    "startOffset": 2302,
+                    "endColumn": 55,
+                    "endOffset": 2353
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 55,
-                        "startColumn": 1,
-                        "startOffset": 2420,
-                        "endColumn": 58,
-                        "endOffset": 2477
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2377,
-                    "endColumn": 53,
-                    "endOffset": 2426
+                    "startOffset": 2358,
+                    "endColumn": 65,
+                    "endOffset": 2419
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 1,
-                        "startOffset": 1177,
-                        "endColumn": 50,
-                        "endOffset": 1226
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2431,
-                    "endColumn": 44,
-                    "endOffset": 2471
+                    "startOffset": 2424,
+                    "endColumn": 40,
+                    "endOffset": 2460
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 1,
-                        "startOffset": 1034,
-                        "endColumn": 41,
-                        "endOffset": 1074
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 2476,
-                    "endColumn": 33,
-                    "endOffset": 2505
+                    "startOffset": 2465,
+                    "endColumn": 61,
+                    "endOffset": 2522
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 53,
-                        "startColumn": 1,
-                        "startOffset": 2355,
-                        "endColumn": 30,
-                        "endOffset": 2384
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 2510,
-                    "endLine": 56,
-                    "endColumn": 9,
-                    "endOffset": 2867
+                    "startOffset": 2527,
+                    "endColumn": 53,
+                    "endOffset": 2576
                 },
                 "from": {
-                    "file": "E:\\oldData\\201703android\\moatv5_0328\\app\\src\\main\\res\\values\\theme.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 1,
-                        "startOffset": 54,
-                        "endLine": 8,
-                        "endColumn": 9,
-                        "endOffset": 417
-                    }
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 2581,
+                    "endColumn": 44,
+                    "endOffset": 2621
+                },
+                "from": {
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 2626,
+                    "endColumn": 33,
+                    "endOffset": 2655
+                },
+                "from": {
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 2660,
+                    "endLine": 59,
+                    "endColumn": 9,
+                    "endOffset": 3017
+                },
+                "from": {
+                    "file": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\values\\theme.xml"
                 }
             }
         ]

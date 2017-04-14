@@ -11,17 +11,91 @@
 	     android:layout_alignParentLeft="true"
 	     android:layout_alignParentBottom="true">
 	</ImageView>
+
 	<TableLayout
 		android:id="@+id/buttonLayout"
 		android:layout_marginTop="1dp"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_centerInParent="true"
 		android:layout_marginLeft="30dp"
 		android:layout_marginRight="30dp"
 		>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="10dp"
+			android:layout_weight="1"
+			android:orientation="horizontal">
+			<LinearLayout
+				android:layout_width="620dp"
+				android:layout_height="wrap_content"
+				>
+				<TextView
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/nowbroadcast"
+					android:textColor="#ffffff"
+					android:textSize="24sp"
+					/>
+				<TextView
+					android:id="@+id/nowTime"
+					android:layout_marginLeft="10dp"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="#ffcf01"
+					android:textSize="24sp"
+					/>
+				<TextView
+					android:id="@+id/nowTitle"
+					android:layout_marginLeft="10dp"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:maxLength="14"
+					android:textColor="#ffcf01"
+					android:textSize="24sp"
+					/>
+
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="600dp"
+				android:layout_height="wrap_content"
+				>
+				<TextView
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/nextbroadcast"
+					android:textColor="#ffffff"
+					android:textSize="24sp"
+					/>
+				<TextView
+					android:id="@+id/nextTime"
+					android:layout_marginLeft="10dp"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="#ffcf01"
+					android:textSize="24sp"
+					/>
+				<TextView
+					android:id="@+id/nextTitle"
+					android:layout_marginLeft="10dp"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:maxLength="14"
+					android:textColor="#ffcf01"
+					android:textSize="24sp"
+					/>
+
+			</LinearLayout>
+		</LinearLayout>
 		<TableRow
-		    android:layout_marginTop="50dp">
+		    >
 		    <RelativeLayout
 		        android:layout_width="130dp"
 			    android:layout_height="170dp"
