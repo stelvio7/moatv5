@@ -33,17 +33,17 @@
         android:paddingBottom="30dp"
         android:paddingTop="40dp"
         android:visibility="gone">
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
             <LinearLayout
                 android:id="@+id/llMenu"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="23dp"></LinearLayout>
-        </ScrollView>
+                android:padding="23dp">
+                <ListView
+                    android:id="@+id/menuListView"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:focusable="false"></ListView>
+            </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

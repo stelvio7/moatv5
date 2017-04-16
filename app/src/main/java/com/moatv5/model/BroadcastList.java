@@ -2,6 +2,8 @@ package com.moatv5.model;
 
 import android.graphics.Bitmap;
 import android.widget.Button;
+import android.widget.LinearLayout;
+
 public class BroadcastList {
 	private String idx;
 	private String vod_code;
@@ -10,7 +12,7 @@ public class BroadcastList {
 	private String pu_no;
 	private Bitmap bitmap;
 	private String type;
-	private Button btns;
+	private LinearLayout btns;
 	private String subid;
 	
     private String genre;
@@ -92,10 +94,10 @@ public class BroadcastList {
 	public void setStory(String story) {
 		this.story = story;
 	}
-	public Button getBtns() {
+	public LinearLayout getBtns() {
 		return btns;
 	}
-	public void setBtns(Button btns) {
+	public void setBtns(LinearLayout btns) {
 		this.btns = btns;
 	}
 	public String getType() {

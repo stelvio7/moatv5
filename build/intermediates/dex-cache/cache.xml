@@ -3,93 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="E:\oldData\201703android\moatv5\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="E:\oldData\201703android\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_832806207078f5439999c08744ce755a1b293f5d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\oldData\201703android\moatv5_0328\app\libs\RootTools-3.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0366ac8a28a574b3964f360c027ad287d173cfa7">
-        <dex dex="E:\oldData\201703android\moatv5_0328\app\build\intermediates\transforms\dex\debug\folders\1000\2\RootTools-3.4_a19d0ef07b0cc05d9c85c67fcf6177296f3f6be3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\oldData\201703android\moatv5\app\libs\RootTools-3.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0366ac8a28a574b3964f360c027ad287d173cfa7">
-        <dex dex="E:\oldData\201703android\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\2\RootTools-3.4_7256907e99662cb0165a195ab13ce37b4a138e2f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\oldData\201703android\moatv5_0328\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="E:\oldData\201703android\moatv5_0328\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_0aa97067903458dac4b06abd113e1d0b74d0edb0\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\oldData\201703android\moatv5\app\libs\RootTools-3.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0366ac8a28a574b3964f360c027ad287d173cfa7">
-        <dex dex="E:\oldData\201703android\moatv5\app\build\intermediates\pre-dexed\debug\RootTools-3.4_7256907e99662cb0165a195ab13ce37b4a138e2f.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\oldData\201703android\moatv5_0328\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="48a84ca6eb555d1c99b53f2ff4c6975ea22f0321">
-        <dex dex="E:\oldData\201703android\moatv5_0328\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a8e45189d7b8d762dbc147ec8b960506030f145a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\oldData\201703android\moatv5_0328\app\libs\universal-image-loader-1.9.2.jar"
+        jar="C:\Users\Administrator\Desktop\201703tv\moatv5\app\libs\universal-image-loader-1.9.2.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
-        <dex dex="E:\oldData\201703android\moatv5_0328\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.2_2d6ef429b5a4cd081d1bf9af43c33ecf6835aabe\classes.dex" />
+        <dex dex="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.2_05de3131ce7a92222f01e85533c9002c38023992\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\oldData\201703android\moatv5\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a7178f85170ff42fe4f7de7a865a9203f1a06d69">
-        <dex dex="E:\oldData\201703android\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_a11dbcbbb749bc0863c11df061ed83f8b78c58fe\classes.dex" />
+        sha1="a185d0a6d24c67e1a602084cbeba869ddd04901e">
+        <dex dex="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_195f8bd1db36eb141f67a1ee30529a60e8fb0819\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\oldData\201703android\moatv5\app\libs\universal-image-loader-1.9.2.jar"
+        jar="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
-        <dex dex="E:\oldData\201703android\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\2\universal-image-loader-1.9.2_252c32cd190afa15eb16e7d97aa8c1360127ade6\classes.dex" />
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_012311bf871db55776bddc5351d9fca7a7938257\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="E:\oldData\201703android\moatv5\app\libs\universal-image-loader-1.9.2.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Administrator\Desktop\201703tv\moatv5\app\libs\RootTools-3.4.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="9e025bc5b84968e7d6ac765e660a70b3e5a87432">
-        <dex dex="E:\oldData\201703android\moatv5\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.2_252c32cd190afa15eb16e7d97aa8c1360127ade6.jar" />
+        sha1="0366ac8a28a574b3964f360c027ad287d173cfa7">
+        <dex dex="C:\Users\Administrator\Desktop\201703tv\moatv5\app\build\intermediates\transforms\dex\debug\folders\1000\2\RootTools-3.4_477fa9de7228882c779513b4d41a6172f7fffcec\classes.dex" />
     </item>
 
 </items>

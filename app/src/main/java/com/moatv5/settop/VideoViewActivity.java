@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
@@ -21,15 +22,21 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.moatv5.listlive.ListLiveActivity;
+import com.moatv5.listlive.ListLiveAdapter;
+import com.moatv5.listlive.ListMenuLiveAdapter;
 import com.moatv5.model.BroadcastList;
 import com.moatv5.model.Constant;
 import com.moatv5.model.DramaContent;
@@ -316,20 +323,82 @@ public class VideoViewActivity extends Activity implements OnClickListener {
     }
 
     void setMenu() {
+        ListView listView;
+        ListMenuLiveAdapter liveListAdapter = new ListMenuLiveAdapter(VideoViewActivity.this,
+                liveList);
+
+
+        if (liveListAdapter != null) {
+            liveListAdapter.notifyDataSetChanged();
+            listView = (ListView) findViewById(R.id.menuListView);
+            listView.setAdapter(liveListAdapter);
+            listView.setFocusable(false);
+            //listView.setOnItemClickListener(this);
+            listView.setItemsCanFocus(true);
+            //listView.setOnScrollListener(this);
+        }
         llMenu = (LinearLayout) findViewById(R.id.llMenu);
         slmenu = (RelativeLayout) findViewById(R.id.slmenu);
+
         for (int i = 0; i < liveList.size(); i++) {
-            Button button = new Button(this);
+            /*Button button = new Button(this);
             button.setBackgroundResource(R.drawable.live_select_button);
             button.setText(liveList.get(i).getTitle());
             button.setTextColor(Color.WHITE);
             button.setTextSize(23);
-            button.setOnClickListener(this);
+            button.setOnClickListener(this);*/
             //button.setFocusable(true);
             //button.requestFocus();
-            liveList.get(i).setBtns(button);
+            //liveList.get(i).setBtns(button);
             //button01.setLayoutParams(params);
-            llMenu.addView(button);
+            //llMenu.addView(button);
+
+//            LayoutInflater inflater = LayoutInflater.from(mContext);
+//            LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
+//            liveList.get(i).setBtns(layout);
+//            ImageView ivNowBroad = (ImageView)layout.findViewById(R.id.ivNowBroad);
+//            TextView txtNowBroad = (TextView)layout.findViewById(R.id.txtNowBroad);
+//            txtNowBroad.setText(liveList.get(i).getNowTitle());
+//            ImageView ivNowChannel = (ImageView)layout.findViewById(R.id.ivNowChannel);
+//            TextView txtNowChannel = (TextView)layout.findViewById(R.id.txtNowChannel);
+//            txtNowChannel.setText(liveList.get(i).getTitle());
+//            TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
+//            txtNextTime.setText(liveList.get(i).getNextTime());
+//            TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
+//            txtNextBroad.setText(liveList.get(i).getNextTitle());
+//            ImageView ivLine1 = (ImageView)layout.findViewById(R.id.ivLine1);
+//            ImageView ivLine2 = (ImageView)layout.findViewById(R.id.ivLine2);
+//            LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
+//            LinearLayout ll2 = (LinearLayout) layout.findViewById(R.id.ll2);
+//
+//            ll1.setTag("" + i + 1);
+//            ll2.setTag("" + i + 2);
+//            ivNowChannel.setTag("" + i + 3);
+//            ivLine1.setTag("" + i + 4);
+//            ivLine2.setTag("" + i + 5);
+//
+//            ll1.setVisibility(View.GONE);
+//            ivNowChannel.setVisibility(View.GONE);
+//            ll2.setVisibility(View.GONE);
+//            ivLine1.setVisibility(View.GONE);
+//            ivLine2.setVisibility(View.GONE);
+//
+//            layout.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+//                @Override
+//                public void onFocusChange(View v, boolean hasFocus) {
+//                    if(hasFocus == false){
+//                        v.get
+//                        for(int k =0; k < v.getChildCount(); k++)){
+//                            View view = v.getChildAt(i);
+//                            if(((String)v.getTag).equal("txt" + Integer.toString(key)){
+//                                return view;
+//                            }
+//
+//                        }
+//                    }
+//                }
+//            });
+      //      llMenu.addView(layout);
         }
     }
 
@@ -482,16 +551,16 @@ public class VideoViewActivity extends Activity implements OnClickListener {
                     slmenu.setVisibility(View.GONE);
                     menuVisible = false;
                 } else {
-                    if (liveList.size() > 0) {
+                    /*if (liveList.size() > 0) {
                         first = false;
-                        liveList.get(0).getBtns().setFocusable(true);
+                        //liveList.get(0).getBtns().setFocusable(true);
                         //getSavedFastIdx();
                         if (Integer.valueOf(getSavedFastIdx()) < liveList.size()) {
                             liveList.get(Integer.valueOf(getSavedFastIdx())).getBtns().requestFocus();
                         } else {
                             liveList.get(Integer.valueOf(0)).getBtns().requestFocus();
                         }
-                    }
+                    }*/
                     if(mainid.equals("broadcast")) {
                         if (dramaList.size() > 0) {
                             first = false;

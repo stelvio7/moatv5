@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:visibility="gone"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/ivNowBroad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nowbroad" />
+        <TextView
+            android:id="@+id/txtNowBroad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="8"
+            android:layout_marginLeft="10dp"
+            android:text="현재방송"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_gravity="center"
+        android:background="@drawable/broadmenu_line" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:focusable="false"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/ivNowChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:background="@drawable/nowchannel" />
+        <Button
+            android:id="@+id/txtNowChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:focusable="true"
+            android:maxLength="8"
+            android:text="현재방송"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_gravity="center"
+        android:background="@drawable/broadmenu_line" />
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/txtNextTime"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:text="오후 05:13~"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#ffcf01"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/txtNextBroad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:maxLength="8"
+            android:text="현재방송"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

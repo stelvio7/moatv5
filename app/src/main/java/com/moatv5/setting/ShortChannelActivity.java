@@ -24,6 +24,7 @@ import com.noh.util.ImageDownloader;
 import com.noh.util.PostHttp;
 import com.noh.util.Util;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener; 
@@ -397,17 +398,42 @@ public class ShortChannelActivity extends Activity implements OnClickListener{
 		llMenu = (LinearLayout)findViewById(R.id.llMenu);
 		slmenu = (RelativeLayout)findViewById(R.id.slmenu);
 		for(int i = 0; i < liveList.size(); i++){
-			Button button = new Button(this);
-	        button.setBackgroundResource(R.drawable.live_select_button);
-	        button.setText(liveList.get(i).getTitle());
-	        button.setTextColor(Color.WHITE);
-	        button.setTextSize(23);
-	        button.setOnClickListener(this);
-	        //button.setFocusable(true);
-	        //button.requestFocus();
-	        liveList.get(i).setBtns(button);
-	        //button01.setLayoutParams(params);
-	        llMenu.addView(button);
+//			Button button = new Button(this);
+//	        button.setBackgroundResource(R.drawable.live_select_button);
+//	        button.setText(liveList.get(i).getTitle());
+//	        button.setTextColor(Color.WHITE);
+//	        button.setTextSize(23);
+//	        button.setOnClickListener(this);
+//	        //button.setFocusable(true);
+//	        //button.requestFocus();
+//	        liveList.get(i).setBtns(button);
+//	        //button01.setLayoutParams(params);
+//	        llMenu.addView(button);
+			LayoutInflater inflater = LayoutInflater.from(mContext);
+			LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
+			liveList.get(i).setBtns(layout);
+			ImageView ivNowBroad = (ImageView)layout.findViewById(R.id.ivNowBroad);
+			TextView txtNowBroad = (TextView)layout.findViewById(R.id.txtNowBroad);
+			txtNowBroad.setText(liveList.get(i).getNowTitle());
+			ImageView ivNowChannel = (ImageView)layout.findViewById(R.id.ivNowChannel);
+			TextView txtNowChannel = (TextView)layout.findViewById(R.id.txtNowChannel);
+			txtNowChannel.setText(liveList.get(i).getTitle());
+			TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
+			txtNextTime.setText(liveList.get(i).getNextTime());
+			TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
+			txtNextBroad.setText(liveList.get(i).getNextTitle());
+			ImageView ivLine1 = (ImageView)layout.findViewById(R.id.ivLine1);
+			ImageView ivLine2 = (ImageView)layout.findViewById(R.id.ivLine2);
+			LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
+			LinearLayout ll2 = (LinearLayout) layout.findViewById(R.id.ll2);
+
+			ll1.setVisibility(View.GONE);
+			ivNowChannel.setVisibility(View.GONE);
+			ll2.setVisibility(View.GONE);
+			ivLine1.setVisibility(View.GONE);
+			ivLine2.setVisibility(View.GONE);
+
+			llMenu.addView(layout);
 		}
 		
 	}

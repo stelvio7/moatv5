@@ -27,14 +27,14 @@
 			    android:layout_centerHorizontal="true"
 			    android:background="@drawable/connect_top1"
 			    />
-		    <ImageView 
-		        android:id="@+id/imgConnect1"
-		        android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:layout_alignBottom="@id/con1"
-			    android:layout_centerHorizontal="true"
-			    android:background="@drawable/connect_x1"
-			    />
+		    <ImageView
+			android:id="@+id/imgConnect1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@id/con1"
+			android:layout_centerHorizontal="true"
+			android:background="@drawable/connect_x1"
+			/>
 	    </RelativeLayout>
 	    <RelativeLayout 
 	        android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
 			    android:layout_centerHorizontal="true"
 			    android:background="@drawable/connect_top2"
 			    />
-		     <ImageView 
+		     <ImageView
 		        android:id="@+id/imgConnect2"
 		        android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
