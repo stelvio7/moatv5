@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\drawable-mdpi\\speed_1.png"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\info_life_top.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\drawable-mdpi\\info_life_top.png"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\view_cable_back.png",
         "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\drawable-mdpi\\view_cable_back.png"
     },

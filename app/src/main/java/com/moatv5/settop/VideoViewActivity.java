@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -323,10 +324,9 @@ public class VideoViewActivity extends Activity implements OnClickListener {
     }
 
     void setMenu() {
-        ListView listView;
+        ListView listView = null;
         ListMenuLiveAdapter liveListAdapter = new ListMenuLiveAdapter(VideoViewActivity.this,
                 liveList);
-
 
         if (liveListAdapter != null) {
             liveListAdapter.notifyDataSetChanged();
@@ -337,6 +337,16 @@ public class VideoViewActivity extends Activity implements OnClickListener {
             listView.setItemsCanFocus(true);
             //listView.setOnScrollListener(this);
         }
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, position);
+                viewDetailTask.execute();
+
+            }
+        });
+
         llMenu = (LinearLayout) findViewById(R.id.llMenu);
         slmenu = (RelativeLayout) findViewById(R.id.slmenu);
 

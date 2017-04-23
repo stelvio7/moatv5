@@ -38,6 +38,8 @@ public class ListMenuLiveAdapter extends BaseAdapter {
             return 0;
     }
 
+
+
     @Override
     public Object getItem(int position) {
         return liveList.get(position);
