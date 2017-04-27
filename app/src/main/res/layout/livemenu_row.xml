@@ -1,9 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.noh.util.CheckableLinearLayoutLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:gravity="center">
+    android:descendantFocusability="blocksDescendants"
 
+    android:gravity="center">
     <LinearLayout
         android:id="@+id/ll1"
         android:visibility="gone"
@@ -97,4 +98,4 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
     </LinearLayout>
-</LinearLayout>
+</com.noh.util.CheckableLinearLayoutLayout>

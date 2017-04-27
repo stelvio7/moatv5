@@ -31,7 +31,7 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/image_live_batang"
         android:paddingBottom="30dp"
-        android:paddingTop="40dp"
+        android:paddingTop="80dp"
         android:visibility="gone">
             <LinearLayout
                 android:id="@+id/llMenu"
@@ -43,6 +43,7 @@
                     android:id="@+id/menuListView"
                     android:layout_width="250dp"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     android:focusable="false"></ListView>
             </LinearLayout>
     </RelativeLayout>

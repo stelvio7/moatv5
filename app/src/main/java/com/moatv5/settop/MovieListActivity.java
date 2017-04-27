@@ -290,8 +290,7 @@ public class MovieListActivity extends Activity {
         AdTask adTask = new AdTask(mContext);
         adTask.execute();
 
-        AdTask2 adTask2 = new AdTask2(mContext);
-        adTask2.execute();
+
         rlMenu = (RelativeLayout) findViewById(R.id.rlMenu);
 
         btnMenu0 = (Button) findViewById(R.id.btnMenu0);
@@ -1407,12 +1406,12 @@ public class MovieListActivity extends Activity {
             if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
                 if (!isClicked) {
                     isClicked = true;
-                    goAdActivity(adBannerIdx);
+                    goAdActivity(adBannerIdx, adBannerType);
                 }
             }else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
                 if (!isClicked) {
                     isClicked = true;
-                    goAdActivity(adBannerIdx2);
+                    goAdActivity(adBannerIdx2, adBannerType2);
                 }
             }
             return false;
@@ -1425,7 +1424,7 @@ public class MovieListActivity extends Activity {
             // TODO Auto-generated method stub
             if (!isClicked) {
                 isClicked = true;
-                goAdActivity(adBannerIdx);
+                goAdActivity(adBannerIdx, adBannerType);
 
             }
         }
@@ -1438,15 +1437,15 @@ public class MovieListActivity extends Activity {
             // TODO Auto-generated method stub
             if (!isClicked) {
                 isClicked = true;
-                goAdActivity(adBannerIdx2);
+                goAdActivity(adBannerIdx2, adBannerType2);
 
             }
         }
     };
 
-    private void goAdActivity(String idx){
+    private void goAdActivity(String idx, String bannerType){
         isClicked = false;
-        if(adBannerType.equals("S")){
+        if(bannerType.equals("S")){
             Intent intent = new Intent(MovieListActivity.this, ShoppingListActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             Bundle myData = new Bundle();
@@ -1455,7 +1454,7 @@ public class MovieListActivity extends Activity {
             myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
-        }else if(adBannerType.equals("D")){
+        }else if(bannerType.equals("D")){
             Intent intent = new Intent(MovieListActivity.this, DeliveryListActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             Bundle myData = new Bundle();
@@ -1464,14 +1463,14 @@ public class MovieListActivity extends Activity {
             myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
-        }else if(adBannerType.equals("Y")){
+        }else if(bannerType.equals("Y")){
             Intent intent = new Intent(MovieListActivity.this, DetailYellowActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             Bundle myData = new Bundle();
             myData.putString("idx", idx);
             intent.putExtras(myData);
             startActivity(intent);
-        }else if(adBannerType.equals("L")){
+        }else if(bannerType.equals("L")){
             Intent intent = new Intent(MovieListActivity.this, LifeListActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             Bundle myData = new Bundle();
@@ -3023,6 +3022,8 @@ public class MovieListActivity extends Activity {
             showCancelMessage();
         }
     }
+
+    private int savedRandom;
     class AdTask extends AsyncTask<String, Integer, Long> {
         private ArrayList<BroadcastList> list = null;
         private int position;
@@ -3049,7 +3050,9 @@ public class MovieListActivity extends Activity {
             JSONArray jArray = null;
             try {
                 jArray = new JSONArray(strJson);
-                JSONObject json_data = jArray.getJSONObject(0);
+                int random = (int)(Math.random() * jArray.length());
+                savedRandom = random;
+                JSONObject json_data = jArray.getJSONObject(random);
                 adImage = json_data.getString("image");
                 adBannerType = json_data.getString("banner_type");
                 adBannerIdx = json_data.getString("banner_idx");
@@ -3073,6 +3076,8 @@ public class MovieListActivity extends Activity {
         @Override
         protected void onPostExecute(Long result) {
             // TODO Auto-generated method stub
+            AdTask2 adTask2 = new AdTask2(mContext);
+            adTask2.execute();
         }
 
         @Override
@@ -3115,7 +3120,11 @@ public class MovieListActivity extends Activity {
             JSONArray jArray = null;
             try {
                 jArray = new JSONArray(strJson);
-                JSONObject json_data = jArray.getJSONObject(0);
+                int random = (int)(Math.random() * jArray.length());
+                while(random == savedRandom) {
+                    random = (int) (Math.random() * jArray.length());
+                }
+                JSONObject json_data = jArray.getJSONObject(random);
                 adImage2 = json_data.getString("image");
                 adBannerType2 = json_data.getString("banner_type");
                 adBannerIdx2 = json_data.getString("banner_idx");

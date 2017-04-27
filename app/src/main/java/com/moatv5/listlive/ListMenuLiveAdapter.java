@@ -1,7 +1,6 @@
 package com.moatv5.listlive;
 
 import android.content.Context;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.moatv5.model.BroadcastList;
-import com.moatv5.model.LiveChannel;
 import com.moatv5.settop.R;
 
 import java.util.ArrayList;
@@ -99,7 +97,12 @@ public class ListMenuLiveAdapter extends BaseAdapter {
 //        ivLine1.setVisibility(View.GONE);
 //        ivLine2.setVisibility(View.GONE);
 
+
         return convertView;
+    }
+
+    public void selected(){
+
     }
 
     private void setOnFocus(LinearLayout selectVod1, TextView listTime1){
