@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:focusable="true"
+            android:focusable="false"
             android:maxLength="8"
             android:text="현재방송"
             android:gravity="center"

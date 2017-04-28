@@ -49,8 +49,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import static com.moatv5.settop.R.drawable.position;
-
 public class VideoViewActivity extends Activity implements OnClickListener {
     private ProgressDialog dlg = null;
     private FullVideoView vv = null;
@@ -83,6 +81,8 @@ public class VideoViewActivity extends Activity implements OnClickListener {
     private String saveIdx;
     private ArrayList<Button> broadcastBtnList = new ArrayList<Button>();
 
+    private ListView listView;
+    private ListMenuLiveAdapter liveListAdapter;
     @Override
     public void onClick(View arg0) {
         // TODO Auto-generated method stub
@@ -221,7 +221,6 @@ public class VideoViewActivity extends Activity implements OnClickListener {
                         dialog.dismiss();
                         // TODO Auto-generated method stub
                         finish();
-
                     }
                 })
                 .create(); // 마지막 create()에서 다 만든 AlertDialog가 returne된다
@@ -320,9 +319,11 @@ public class VideoViewActivity extends Activity implements OnClickListener {
         editor.commit();
     }
 
+
+
     void setMenu() {
-        final ListView listView = (ListView) findViewById(R.id.menuListView);
-        ListMenuLiveAdapter liveListAdapter = new ListMenuLiveAdapter(VideoViewActivity.this,
+        ListView listView = (ListView) findViewById(R.id.menuListView);
+        liveListAdapter = new ListMenuLiveAdapter(VideoViewActivity.this,
                 liveList);
 
         liveListAdapter.notifyDataSetChanged();
@@ -330,29 +331,34 @@ public class VideoViewActivity extends Activity implements OnClickListener {
         listView.setAdapter(liveListAdapter);
         //listView.setFocusable(false);
         //listView.setOnItemClickListener(this);
-        listView.setItemsCanFocus(true);
+
         //listView.setOnScrollListener(this);
-        Log.d("dd", "ddddddd" + position);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("dd", "ddddddd" + position);
                 ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, position);
                 viewDetailTask.execute();
             }
         });
-        
-        //listView.setItemsCanFocus(false);
+
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+
+        listView.setItemsCanFocus(true);
+        listView.setSelected(true);
+        listView.setSelection(0);
         listView.setItemChecked(0, true);
+
         listView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                LinearLayout ll1 = (LinearLayout) view.findViewById(R.id.ll1);
+                /*LinearLayout ll1 = (LinearLayout) view.findViewById(R.id.ll1);
                 LinearLayout ll2 = (LinearLayout) view.findViewById(R.id.ll2);
                 ll1.setVisibility(View.VISIBLE);
-                ll2.setVisibility(View.VISIBLE);
+                ll2.setVisibility(View.VISIBLE);*/
+                liveList.get(position).setFocused(true);
+                Log.d("dddd", "Ddddddd");
+
             }
 
             @Override
@@ -365,19 +371,19 @@ public class VideoViewActivity extends Activity implements OnClickListener {
         llMenu = (LinearLayout) findViewById(R.id.llMenu);
         slmenu = (RelativeLayout) findViewById(R.id.slmenu);
 
-        for (int i = 0; i < liveList.size(); i++) {
-            /*Button button = new Button(this);
-            button.setBackgroundResource(R.drawable.live_select_button);
-            button.setText(liveList.get(i).getTitle());
-            button.setTextColor(Color.WHITE);
-            button.setTextSize(23);
-            button.setOnClickListener(this);*/
-            //button.setFocusable(true);
-            //button.requestFocus();
-            //liveList.get(i).setBtns(button);
-            //button01.setLayoutParams(params);
-            //llMenu.addView(button);
-
+//        for (int i = 0; i < liveList.size(); i++) {
+//            /*Button button = new Button(this);
+//            button.setBackgroundResource(R.drawable.live_select_button);
+//            button.setText(liveList.get(i).getTitle());
+//            button.setTextColor(Color.WHITE);
+//            button.setTextSize(23);
+//            button.setOnClickListener(this);*/
+//            //button.setFocusable(true);
+//            //button.requestFocus();
+//            //liveList.get(i).setBtns(button);
+//            //button01.setLayoutParams(params);
+//            //llMenu.addView(button);
+//
 //            LayoutInflater inflater = LayoutInflater.from(mContext);
 //            LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
 //            liveList.get(i).setBtns(layout);
@@ -412,6 +418,7 @@ public class VideoViewActivity extends Activity implements OnClickListener {
 //                @Override
 //                public void onFocusChange(View v, boolean hasFocus) {
 //                    if(hasFocus == false){
+//                        (LinearLayout)v.get
 //                        v.get
 //                        for(int k =0; k < v.getChildCount(); k++)){
 //                            View view = v.getChildAt(i);
@@ -423,8 +430,8 @@ public class VideoViewActivity extends Activity implements OnClickListener {
 //                    }
 //                }
 //            });
-      //      llMenu.addView(layout);
-        }
+//            llMenu.addView(layout);
+//        }
     }
 
 
@@ -600,6 +607,11 @@ public class VideoViewActivity extends Activity implements OnClickListener {
                                 broadcastBtnList.get(Integer.valueOf(0)).requestFocus();
                             //}
                         }
+                    }else{
+                        listView.setItemsCanFocus(true);
+                        listView.setSelected(true);
+                        listView.setSelection(0);
+                        listView.setItemChecked(0, true);
                     }
                     slmenu.setVisibility(View.VISIBLE);
                     Log.d("vi", "visible");

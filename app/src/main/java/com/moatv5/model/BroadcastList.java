@@ -1,7 +1,6 @@
 package com.moatv5.model;
 
 import android.graphics.Bitmap;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class BroadcastList {
@@ -30,9 +29,16 @@ public class BroadcastList {
 	private String nowTime;
 	private String nextTitle;
 	private String nextTime;
-    
-    
-	
+
+	public boolean isFocused() {
+		return focused;
+	}
+
+	public void setFocused(boolean focused) {
+		this.focused = focused;
+	}
+
+	private boolean focused;
 
 	public String getwIdx() {
 		return wIdx;

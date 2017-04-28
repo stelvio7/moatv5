@@ -1,6 +1,7 @@
 package com.moatv5.listlive;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,7 +70,6 @@ public class ListMenuLiveAdapter extends BaseAdapter {
             viewHolder.ll1 = (LinearLayout) convertView.findViewById(R.id.ll1);
             viewHolder.ll2 = (LinearLayout) convertView.findViewById(R.id.ll2);
 
-
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (LiveMenuListViewHolder) convertView.getTag();
@@ -80,17 +80,33 @@ public class ListMenuLiveAdapter extends BaseAdapter {
         viewHolder.txtNextTime.setText(liveList.get(position).getNextTime());
         viewHolder.txtNextBroad.setText(liveList.get(position).getNextTitle());
         viewHolder.txtNowChannel.setFocusable(true);
-        viewHolder.txtNowChannel.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    viewHolder.ll1.setVisibility(View.VISIBLE);
-                    viewHolder.ll2.setVisibility(View.VISIBLE);
-                } else {
-                    viewHolder.ll1.setVisibility(View.GONE);
-                    viewHolder.ll2.setVisibility(View.GONE);
-                }
-            }
-        });
+
+        viewHolder.ll1.setTag("ll1" + String.valueOf(position));
+        viewHolder.ll2.setTag("ll2" + String.valueOf(position));
+        if(liveList.get(position).isFocused()){
+            Log.d("dddd", "1111111");
+            if(viewHolder.ll1.getTag().equals("ll1" + String.valueOf(position)))
+                viewHolder.ll1.setVisibility(View.VISIBLE);
+            if(viewHolder.ll2.getTag().equals("ll2" + String.valueOf(position)))
+                viewHolder.ll2.setVisibility(View.VISIBLE);
+        }else{
+            Log.d("dddd", "2222222");
+            if(viewHolder.ll1.getTag().equals("ll1" + String.valueOf(position)))
+                viewHolder.ll1.setVisibility(View.GONE);
+            if(viewHolder.ll2.getTag().equals("ll2" + String.valueOf(position)))
+                viewHolder.ll2.setVisibility(View.GONE);
+        }
+//        viewHolder.txtNowChannel.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (hasFocus) {
+//                    viewHolder.ll1.setVisibility(View.VISIBLE);
+//                    viewHolder.ll2.setVisibility(View.VISIBLE);
+//                } else {
+//                    viewHolder.ll1.setVisibility(View.GONE);
+//                    viewHolder.ll2.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 //        ll1.setVisibility(View.GONE);
 //        ivNowChannel.setVisibility(View.GONE);
 //        ll2.setVisibility(View.GONE);
