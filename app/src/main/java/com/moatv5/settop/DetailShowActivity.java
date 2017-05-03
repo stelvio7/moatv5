@@ -601,6 +601,7 @@ public class DetailShowActivity extends Activity {
         protected void onPostExecute(Long result) {
             // TODO Auto-generated method stub
             Log.i(null, "url" + vod_url);
+            saveFastIdx(String.valueOf(nowPosition));
             checkPlay(result_code, vod_url, nowShowList.get(nowPosition).getP_code());
             isClicked = false;
         }
@@ -694,6 +695,13 @@ public class DetailShowActivity extends Activity {
             AlertDialog alert = alt_bld.create();
             alert.show();
         }
+    }
+
+    public void saveFastIdx(String fastidx) {
+        SharedPreferences sp = getSharedPreferences(Util.getApplicationName(getApplicationContext()), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("fastidx", fastidx);
+        editor.commit();
     }
 
     private void goLivePlay(String strUrl, String idx) {

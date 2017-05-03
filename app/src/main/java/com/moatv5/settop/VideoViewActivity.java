@@ -21,9 +21,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,6 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.moatv5.listlive.ListMenuLiveAdapter;
 import com.moatv5.model.BroadcastList;
@@ -89,7 +92,7 @@ public class VideoViewActivity extends Activity implements OnClickListener {
         for (int i = 0; i < liveList.size(); i++) {
             if (arg0 == liveList.get(i).getBtns()) {
                 if (!isClicked) {
-                    saveFastIdx(String.valueOf(i));
+                    //saveFastIdx(String.valueOf(i));
                     if (vv != null) {
                         Log.e(null, "ididididid" + String.valueOf(vv.getCurrentPosition()));
                         saveDate(url, String.valueOf(vv.getCurrentPosition()));
@@ -111,7 +114,7 @@ public class VideoViewActivity extends Activity implements OnClickListener {
         for (int i = 0; i < dramaList.size(); i++) {
             if (arg0 == broadcastBtnList.get(i)) {
                 if (!isClicked) {
-                    saveFastIdx(String.valueOf(i));
+                    //saveFastIdx(String.valueOf(i));
                     if (vv != null) {
                         Log.e(null, "ididididid" + String.valueOf(vv.getCurrentPosition()));
                         saveDate(url, String.valueOf(vv.getCurrentPosition()));
@@ -162,7 +165,7 @@ public class VideoViewActivity extends Activity implements OnClickListener {
             dlg.show();
         }
         //이어 보기
-        if(mainid.equals("broadcast")){
+        if(mainid.equals("broadcast") && !subid.equals("update")){
             setBroadcastMenu();
         }else{
             GetTask getTask = new GetTask(mContext);
@@ -322,116 +325,113 @@ public class VideoViewActivity extends Activity implements OnClickListener {
 
 
     void setMenu() {
-        ListView listView = (ListView) findViewById(R.id.menuListView);
-        liveListAdapter = new ListMenuLiveAdapter(VideoViewActivity.this,
-                liveList);
-
-        liveListAdapter.notifyDataSetChanged();
-        listView.setVisibility(View.VISIBLE);
-        listView.setAdapter(liveListAdapter);
-        //listView.setFocusable(false);
-        //listView.setOnItemClickListener(this);
-
-        //listView.setOnScrollListener(this);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, position);
-                viewDetailTask.execute();
-            }
-        });
-
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-
-        listView.setItemsCanFocus(true);
-        listView.setSelected(true);
-        listView.setSelection(0);
-        listView.setItemChecked(0, true);
-
-        listView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                /*LinearLayout ll1 = (LinearLayout) view.findViewById(R.id.ll1);
-                LinearLayout ll2 = (LinearLayout) view.findViewById(R.id.ll2);
-                ll1.setVisibility(View.VISIBLE);
-                ll2.setVisibility(View.VISIBLE);*/
-                liveList.get(position).setFocused(true);
-                Log.d("dddd", "Ddddddd");
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                //ll1.setVisibility(View.GONE);
-               /// ll2.setVisibility(View.GONE);
-            }
-        });
+//        listView = (ListView) findViewById(R.id.menuListView);
+//        liveListAdapter = new ListMenuLiveAdapter(VideoViewActivity.this,
+//                liveList);
+//
+//        liveListAdapter.notifyDataSetChanged();
+//        listView.setVisibility(View.VISIBLE);
+//        listView.setAdapter(liveListAdapter);
+//        //listView.setFocusable(false);
+//        //listView.setOnItemClickListener(this);
+//
+//        //listView.setOnScrollListener(this);
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, position);
+//                viewDetailTask.execute();
+//            }
+//        });
+//
+//        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+//
+//        listView.setItemsCanFocus(true);
+//        listView.setSelected(true);
+//        listView.setSelection(0);
+//        listView.setItemChecked(0, true);
+//
+//        listView.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                LinearLayout ll1 = (LinearLayout) view.findViewById(R.id.ll1);
+//                LinearLayout ll2 = (LinearLayout) view.findViewById(R.id.ll2);
+//                ll1.setVisibility(View.VISIBLE);
+//                ll2.setVisibility(View.VISIBLE);
+//                liveList.get(position).setFocused(true);
+//                Log.d("dddd", "Ddddddd");
+//
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//                //ll1.setVisibility(View.GONE);
+//               /// ll2.setVisibility(View.GONE);
+//            }
+//        });
 
         llMenu = (LinearLayout) findViewById(R.id.llMenu);
         slmenu = (RelativeLayout) findViewById(R.id.slmenu);
 
-//        for (int i = 0; i < liveList.size(); i++) {
-//            /*Button button = new Button(this);
-//            button.setBackgroundResource(R.drawable.live_select_button);
-//            button.setText(liveList.get(i).getTitle());
-//            button.setTextColor(Color.WHITE);
-//            button.setTextSize(23);
-//            button.setOnClickListener(this);*/
-//            //button.setFocusable(true);
-//            //button.requestFocus();
-//            //liveList.get(i).setBtns(button);
-//            //button01.setLayoutParams(params);
-//            //llMenu.addView(button);
-//
-//            LayoutInflater inflater = LayoutInflater.from(mContext);
-//            LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
-//            liveList.get(i).setBtns(layout);
-//            ImageView ivNowBroad = (ImageView)layout.findViewById(R.id.ivNowBroad);
-//            TextView txtNowBroad = (TextView)layout.findViewById(R.id.txtNowBroad);
-//            txtNowBroad.setText(liveList.get(i).getNowTitle());
-//            ImageView ivNowChannel = (ImageView)layout.findViewById(R.id.ivNowChannel);
-//            TextView txtNowChannel = (TextView)layout.findViewById(R.id.txtNowChannel);
-//            txtNowChannel.setText(liveList.get(i).getTitle());
-//            TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
-//            txtNextTime.setText(liveList.get(i).getNextTime());
-//            TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
-//            txtNextBroad.setText(liveList.get(i).getNextTitle());
-//            ImageView ivLine1 = (ImageView)layout.findViewById(R.id.ivLine1);
-//            ImageView ivLine2 = (ImageView)layout.findViewById(R.id.ivLine2);
-//            LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
-//            LinearLayout ll2 = (LinearLayout) layout.findViewById(R.id.ll2);
-//
-//            ll1.setTag("" + i + 1);
-//            ll2.setTag("" + i + 2);
-//            ivNowChannel.setTag("" + i + 3);
-//            ivLine1.setTag("" + i + 4);
-//            ivLine2.setTag("" + i + 5);
-//
-//            ll1.setVisibility(View.GONE);
-//            ivNowChannel.setVisibility(View.GONE);
-//            ll2.setVisibility(View.GONE);
-//            ivLine1.setVisibility(View.GONE);
-//            ivLine2.setVisibility(View.GONE);
-//
-//            layout.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-//                @Override
-//                public void onFocusChange(View v, boolean hasFocus) {
-//                    if(hasFocus == false){
-//                        (LinearLayout)v.get
-//                        v.get
-//                        for(int k =0; k < v.getChildCount(); k++)){
-//                            View view = v.getChildAt(i);
-//                            if(((String)v.getTag).equal("txt" + Integer.toString(key)){
-//                                return view;
-//                            }
-//
-//                        }
-//                    }
-//                }
-//            });
-//            llMenu.addView(layout);
-//        }
+        for (int i = 0; i < liveList.size(); i++) {
+            /*Button button = new Button(this);
+            button.setBackgroundResource(R.drawable.live_select_button);
+            button.setText(liveList.get(i).getTitle());
+            button.setTextColor(Color.WHITE);
+            button.setTextSize(23);
+            button.setOnClickListener(this);*/
+            //button.setFocusable(true);
+            //button.requestFocus();
+            //liveList.get(i).setBtns(button);
+            //button01.setLayoutParams(params);
+            //llMenu.addView(button);
+
+            LayoutInflater inflater = LayoutInflater.from(mContext);
+            LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
+            liveList.get(i).setBtns(layout);
+            TextView txtNowBroad = (TextView)layout.findViewById(R.id.txtNowBroad);
+            txtNowBroad.setText(liveList.get(i).getNowTitle());
+            TextView txtNowChannel = (TextView)layout.findViewById(R.id.txtNowChannel);
+            txtNowChannel.setText(liveList.get(i).getTitle());
+            TextView txtNowChannel2 = (TextView)layout.findViewById(R.id.txtNowChannel2);
+            txtNowChannel2.setText(liveList.get(i).getTitle());
+            TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
+            txtNextTime.setText(liveList.get(i).getNextTime().substring(2));
+            TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
+            txtNextBroad.setText(liveList.get(i).getNextTitle());
+            LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
+            LinearLayout ll2 = (LinearLayout) layout.findViewById(R.id.ll2);
+
+
+            ll1.setVisibility(View.GONE);
+
+            final int k = i;
+            layout.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, k);
+                    viewDetailTask.execute();
+                }
+            });
+            layout.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if(hasFocus){
+                        //for(int k =0; k < ((ViewGroup)v).getChildCount(); k++){
+                            ((ViewGroup)v).getChildAt(0).setVisibility(View.VISIBLE);
+                            ((ViewGroup)v).getChildAt(1).setVisibility(View.GONE);
+                        //}
+                    }else{
+                        //for(int k =0; k < ((ViewGroup)v).getChildCount(); k++){
+                            ((ViewGroup)v).getChildAt(0).setVisibility(View.GONE);
+                            ((ViewGroup)v).getChildAt(1).setVisibility(View.VISIBLE);
+                        //}
+                    }
+                }
+            });
+            llMenu.addView(layout);
+        }
     }
 
 
@@ -594,26 +594,35 @@ public class VideoViewActivity extends Activity implements OnClickListener {
                             liveList.get(Integer.valueOf(0)).getBtns().requestFocus();
                         }
                     }*/
-                    if(mainid.equals("broadcast")) {
+                    if(mainid.equals("broadcast") && !subid.equals("update")) {
                         if (dramaList.size() > 0) {
                             first = false;
                             for(int i = 0; i < broadcastBtnList.size(); i++) {
                                 broadcastBtnList.get(i).setFocusable(true);
                             }
                             //getSavedFastIdx();
-                            //if (Integer.valueOf(getSavedFastIdx()) < dramaList.size()) {
-                            //    broadcastBtnList.get(Integer.valueOf(getSavedFastIdx())).requestFocus();
-                            //} else {
+                            if (Integer.valueOf(getSavedFastIdx()) < dramaList.size()) {
+                                broadcastBtnList.get(Integer.valueOf(getSavedFastIdx())).requestFocus();
+                            } else {
                                 broadcastBtnList.get(Integer.valueOf(0)).requestFocus();
-                            //}
+                            }
                         }
-                    }else{
-                        listView.setItemsCanFocus(true);
-                        listView.setSelected(true);
-                        listView.setSelection(0);
-                        listView.setItemChecked(0, true);
+                        slmenu.setVisibility(View.VISIBLE);
+                    }else if(!mainid.equals("broadcast")  && !mainid.equals("movie")){
+                        if (Integer.valueOf(getSavedFastIdx()) < liveList.size()) {
+                            liveList.get(Integer.valueOf(getSavedFastIdx())).getBtns().requestFocus();
+                        } else {
+                            liveList.get(0).getBtns().requestFocus();
+                        }
+
+//                        listView.setItemsCanFocus(true);
+//                        listView.setSelected(true);
+//                        listView.setSelection(0);
+//                        listView.setItemChecked(0, true);
+//                        liveListAdapter.notifyDataSetChanged();
+                        slmenu.setVisibility(View.VISIBLE);
                     }
-                    slmenu.setVisibility(View.VISIBLE);
+
                     Log.d("vi", "visible");
                     menuVisible = true;
                 }
@@ -842,10 +851,13 @@ public class VideoViewActivity extends Activity implements OnClickListener {
         protected void onPostExecute(Long result) {
             // TODO Auto-generated method stub
             if (result_code != null) {
-                if(mainid.equals("broadcast"))
+                if(mainid.equals("broadcast")) {
+                    saveFastIdx(String.valueOf(position));
                     checkPlay(result_code, vod_url, idx, dramaList.get(position).getSubid(), true);
-                else
+                }else {
+                    saveFastIdx(String.valueOf(position));
                     checkPlay(result_code, vod_url, liveList.get(position).getIdx(), liveList.get(position).getSubid(), false);
+                }
             }
             isClicked = false;
         }

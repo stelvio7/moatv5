@@ -209,7 +209,7 @@ public class SpeedActivity extends Activity {
                 Thread.sleep(100);
 
                 URL url = new URL("http://" + serverList.get(idxServer).getDomain() + "/movie/old/o_199107060.mp4");
-                //Log.d("dd", "http://" + serverList.get(idxServer).getDomain() + "/movie/old/o_199107060.mp4");
+                Log.d("dd", "http://" + serverList.get(idxServer).getDomain() + "/movie/old/o_199107060.mp4");
                 URLConnection conexion = url.openConnection();
                 conexion.connect();
 
@@ -332,8 +332,9 @@ public class SpeedActivity extends Activity {
                 JSONObject json_data = new JSONObject(strJson);
                 int idx = Integer.parseInt(json_data.getString("live_server"));
 
-                idxServer =idx;
+                idxServer =idx-1;
                 Log.d("", "idx" + idxServer);
+
                 loginSuccess = true;
             } catch (JSONException e) {
             }
@@ -347,7 +348,11 @@ public class SpeedActivity extends Activity {
         protected void onPostExecute(Boolean result) {
             // TODO Auto-generated method stub
             if (result) {
+                if(txtServer != null) {
+                    txtServer.setSelected(true);
+                    txtServer.setSelection(idxServer);
 
+                }
             }
         }
 
@@ -419,14 +424,16 @@ public class SpeedActivity extends Activity {
                 btnSpeedCheck.setVisibility(View.VISIBLE);
                 txtServer.setAdapter(new ArrayAdapter<String>(SpeedActivity.this, R.layout.spinner_item, strServerList));
 
+
                 txtServer.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                                         @Override
                                                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                                            idxServer = position;
-                                                            Log.d("", "set" + idxServer);
                                                             if(!isfirst) {
+                                                                idxServer = position;
+                                                                Log.d("", "set" + idxServer);
                                                                 SelectTask downloadTask = new SelectTask(getBaseContext());
                                                                 downloadTask.execute();
+
                                                             }
                                                             isfirst = false;
                                                         }
@@ -436,6 +443,7 @@ public class SpeedActivity extends Activity {
                                                         }
                                                     }
                 );
+
                 if(isfirst) {
                     GetNowTask getTask = new GetNowTask(getBaseContext());
                     getTask.execute();
@@ -518,7 +526,17 @@ public class SpeedActivity extends Activity {
             // TODO Auto-generated method stub
             if (result) {
                 AlertDialog.Builder alt_bld = new AlertDialog.Builder(SpeedActivity.this);
-                alt_bld.setMessage(R.string.serverchanged);
+                alt_bld.setMessage(serverList.get(idxServer).getName() + getString(R.string.serverchanged));
+                alt_bld.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alert = alt_bld.create();
+                alert.show();
+            }else{
+                AlertDialog.Builder alt_bld = new AlertDialog.Builder(SpeedActivity.this);
+                alt_bld.setMessage(R.string.servernotchange);
                 alt_bld.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

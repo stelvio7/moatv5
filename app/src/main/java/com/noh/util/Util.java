@@ -152,6 +152,7 @@ public class Util {
 		SharedPreferences sp = context.getSharedPreferences(Util.getApplicationName(context), Context.MODE_PRIVATE);
 		//return sp.getString("uuid", "");
 		return "00000000-07fd-42f7-ffff-ffff99d603a9";
+
 		//return "00000000-4e1d-ffad-9276-b54e0033c587";
 	} 
 	
@@ -256,6 +257,19 @@ public class Util {
 		// 연월일 시분초를 주어진 포맷으로 출력
 		return String.format("%d-%02d-%02d",
 				year, month, date);
+	}
+
+	public static String getExDay2(int day){
+		GregorianCalendar calendar = new GregorianCalendar();
+		calendar.add(Calendar.DATE, day);
+		int year = calendar.get(Calendar.YEAR);
+		// 월은 0~11로 리턴되기 때문에 1을 더한다.
+		int month = calendar.get(Calendar.MONTH) + 1;
+		int date = calendar.get(Calendar.DATE);
+
+		// 연월일 시분초를 주어진 포맷으로 출력
+		return String.format("%d월 %02d일",
+				month, date);
 	}
 
 	public static String getNowTime(){

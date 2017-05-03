@@ -55,7 +55,8 @@
 	<string name="no">아니오</string>
 	<string name="update">새로운 버전이 있습니다. 업데이트 하시겠습니까?</string>
 	<string name="noupdate">현재 최신버전입니다.</string>
-	<string name="serverchanged">서버가 변경되었습니다.</string>
+	<string name="serverchanged"> 서버로 연결되었습니다.</string>
+	<string name="servernotchange">현재 서버입니다.</string>
 	
 	<string name="nowbroadcast">현재 방송</string>
 	<string name="nextbroadcast">다음 방송</string>

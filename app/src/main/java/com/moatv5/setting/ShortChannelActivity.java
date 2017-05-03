@@ -19,6 +19,7 @@ import com.moatv5.model.BroadcastList;
 import com.moatv5.model.Constant;
 import com.moatv5.model.ExchangeDateList;
 import com.moatv5.model.ShortChannelDateList;
+import com.moatv5.settop.VideoViewActivity;
 import com.moatv5.settop.shopping.ExchangeActivity;
 import com.noh.util.ImageDownloader;
 import com.noh.util.PostHttp;
@@ -40,6 +41,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -395,47 +397,61 @@ public class ShortChannelActivity extends Activity implements OnClickListener{
 	}
     
     void setMenu(){
-		llMenu = (LinearLayout)findViewById(R.id.llMenu);
-		slmenu = (RelativeLayout)findViewById(R.id.slmenu);
-		for(int i = 0; i < liveList.size(); i++){
-//			Button button = new Button(this);
-//	        button.setBackgroundResource(R.drawable.live_select_button);
-//	        button.setText(liveList.get(i).getTitle());
-//	        button.setTextColor(Color.WHITE);
-//	        button.setTextSize(23);
-//	        button.setOnClickListener(this);
-//	        //button.setFocusable(true);
-//	        //button.requestFocus();
-//	        liveList.get(i).setBtns(button);
-//	        //button01.setLayoutParams(params);
-//	        llMenu.addView(button);
+		llMenu = (LinearLayout) findViewById(R.id.llMenu);
+		slmenu = (RelativeLayout) findViewById(R.id.slmenu);
+
+		for (int i = 0; i < liveList.size(); i++) {
+            /*Button button = new Button(this);
+            button.setBackgroundResource(R.drawable.live_select_button);
+            button.setText(liveList.get(i).getTitle());
+            button.setTextColor(Color.WHITE);
+            button.setTextSize(23);
+            button.setOnClickListener(this);*/
+			//button.setFocusable(true);
+			//button.requestFocus();
+			//liveList.get(i).setBtns(button);
+			//button01.setLayoutParams(params);
+			//llMenu.addView(button);
+
 			LayoutInflater inflater = LayoutInflater.from(mContext);
 			LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
 			liveList.get(i).setBtns(layout);
-			ImageView ivNowBroad = (ImageView)layout.findViewById(R.id.ivNowBroad);
 			TextView txtNowBroad = (TextView)layout.findViewById(R.id.txtNowBroad);
 			txtNowBroad.setText(liveList.get(i).getNowTitle());
-			ImageView ivNowChannel = (ImageView)layout.findViewById(R.id.ivNowChannel);
 			TextView txtNowChannel = (TextView)layout.findViewById(R.id.txtNowChannel);
 			txtNowChannel.setText(liveList.get(i).getTitle());
+			TextView txtNowChannel2 = (TextView)layout.findViewById(R.id.txtNowChannel2);
+			txtNowChannel2.setText(liveList.get(i).getTitle());
 			TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
-			txtNextTime.setText(liveList.get(i).getNextTime());
+			txtNextTime.setText(liveList.get(i).getNextTime().substring(2));
 			TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
 			txtNextBroad.setText(liveList.get(i).getNextTitle());
-			ImageView ivLine1 = (ImageView)layout.findViewById(R.id.ivLine1);
-			ImageView ivLine2 = (ImageView)layout.findViewById(R.id.ivLine2);
 			LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
 			LinearLayout ll2 = (LinearLayout) layout.findViewById(R.id.ll2);
 
-			ll1.setVisibility(View.GONE);
-			ivNowChannel.setVisibility(View.GONE);
-			ll2.setVisibility(View.GONE);
-			ivLine1.setVisibility(View.GONE);
-			ivLine2.setVisibility(View.GONE);
 
+			ll1.setVisibility(View.GONE);
+
+			final int k = i;
+			layout.setOnClickListener(this);
+			layout.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+				@Override
+				public void onFocusChange(View v, boolean hasFocus) {
+					if(hasFocus){
+						//for(int k =0; k < ((ViewGroup)v).getChildCount(); k++){
+						((ViewGroup)v).getChildAt(0).setVisibility(View.VISIBLE);
+						((ViewGroup)v).getChildAt(1).setVisibility(View.GONE);
+						//}
+					}else{
+						//for(int k =0; k < ((ViewGroup)v).getChildCount(); k++){
+						((ViewGroup)v).getChildAt(0).setVisibility(View.GONE);
+						((ViewGroup)v).getChildAt(1).setVisibility(View.VISIBLE);
+						//}
+					}
+				}
+			});
 			llMenu.addView(layout);
 		}
-		
 	}
     
     void clickOkButton(int idx){
@@ -653,7 +669,7 @@ public class ShortChannelActivity extends Activity implements OnClickListener{
 			PostHttp postmake = new PostHttp();
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 			nameValuePairs.add(new BasicNameValuePair("start", String.valueOf(startIdx)));
-			nameValuePairs.add(new BasicNameValuePair("end", String.valueOf(endIdx)));
+			nameValuePairs.add(new BasicNameValuePair("end", "30"));//String.valueOf(endIdx)));
 			nameValuePairs.add(new BasicNameValuePair("id", getMacaddress()));
 			
 			//nameValuePairs.add(new BasicNameValuePair("code2", subids[j]));
@@ -676,6 +692,13 @@ public class ShortChannelActivity extends Activity implements OnClickListener{
 					tempList.setTitle(json_data.getString("title"));
 					tempList.setPu_no(json_data.getString("pu_no"));
 					//list.add(tempList);
+
+					tempList.setSubid("live");
+
+					tempList.setNowTitle(json_data.getString("now_title"));
+					tempList.setNowTime(json_data.getString("now_time"));
+					tempList.setNextTitle(json_data.getString("next_title"));
+					tempList.setNextTime(json_data.getString("next_time"));
 					liveList.add(tempList);
 				}
 			}catch(JSONException e){

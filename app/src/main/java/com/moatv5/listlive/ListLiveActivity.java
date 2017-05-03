@@ -42,6 +42,7 @@ public class ListLiveActivity extends Activity {
     private TextView listTime2;
     private TextView listTime3;
     private TextView listTime4;
+    private TextView txtMenuDay;
     private int selectedTime;
 
     private String day;
@@ -63,12 +64,15 @@ public class ListLiveActivity extends Activity {
         listTime2 = (TextView) findViewById(R.id.listTime2);
         listTime3 = (TextView) findViewById(R.id.listTime3);
         listTime4 = (TextView) findViewById(R.id.listTime4);
+        txtMenuDay = (TextView) findViewById(R.id.txtMenuDay);
         liveListAdapter = new ListLiveAdapter(ListLiveActivity.this,
                 channelList, listTime1, listTime2, listTime3, listTime4, this);
 
 
         exDay = 0;
         day = Util.getExDay(exDay);
+
+        txtMenuDay.setText(Util.getExDay2(exDay));
         setNowSelectedTime();
         setTimeHead();
 
@@ -115,6 +119,7 @@ public class ListLiveActivity extends Activity {
             }
             selectedTime = 0;
             day = Util.getExDay(exDay);
+            txtMenuDay.setText(Util.getExDay2(exDay));
         }
         setTimeHead();
         ListTask listTask = new ListTask(mContext);
@@ -133,6 +138,7 @@ public class ListLiveActivity extends Activity {
             }
             selectedTime = 20;
             day = Util.getExDay(exDay);
+            txtMenuDay.setText(Util.getExDay2(exDay));
         }
         setTimeHead();
         ListTask listTask = new ListTask(mContext);

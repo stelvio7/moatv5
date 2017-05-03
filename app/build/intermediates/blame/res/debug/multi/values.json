@@ -1,5 +1,654 @@
 [
     {
+        "outputFile": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 37,
+                    "endOffset": 88
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 93,
+                    "endColumn": 35,
+                    "endOffset": 124
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 129,
+                    "endColumn": 67,
+                    "endOffset": 192
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 197,
+                    "endColumn": 42,
+                    "endOffset": 235
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 240,
+                    "endColumn": 54,
+                    "endOffset": 290
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 295,
+                    "endColumn": 61,
+                    "endOffset": 352
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 357,
+                    "endColumn": 61,
+                    "endOffset": 414
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 419,
+                    "endColumn": 59,
+                    "endOffset": 474
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 479,
+                    "endColumn": 59,
+                    "endOffset": 534
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 539,
+                    "endColumn": 63,
+                    "endOffset": 598
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 603,
+                    "endColumn": 64,
+                    "endOffset": 663
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 668,
+                    "endColumn": 65,
+                    "endOffset": 729
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 734,
+                    "endColumn": 71,
+                    "endOffset": 801
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 806,
+                    "endColumn": 51,
+                    "endOffset": 853
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 858,
+                    "endColumn": 36,
+                    "endOffset": 890
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 895,
+                    "endColumn": 43,
+                    "endOffset": 934
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 939,
+                    "endColumn": 40,
+                    "endOffset": 975
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 980,
+                    "endColumn": 61,
+                    "endOffset": 1037
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1042,
+                    "endColumn": 61,
+                    "endOffset": 1099
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1104,
+                    "endColumn": 41,
+                    "endOffset": 1141
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1146,
+                    "endColumn": 41,
+                    "endOffset": 1183
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1188,
+                    "endColumn": 41,
+                    "endOffset": 1225
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1230,
+                    "endColumn": 41,
+                    "endOffset": 1267
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1272,
+                    "endColumn": 41,
+                    "endOffset": 1309
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1314,
+                    "endColumn": 43,
+                    "endOffset": 1353
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1358,
+                    "endColumn": 47,
+                    "endOffset": 1401
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1406,
+                    "endColumn": 34,
+                    "endOffset": 1436
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1441,
+                    "endColumn": 65,
+                    "endOffset": 1502
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1507,
+                    "endColumn": 66,
+                    "endOffset": 1569
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1574,
+                    "endColumn": 48,
+                    "endOffset": 1618
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1623,
+                    "endColumn": 48,
+                    "endOffset": 1667
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 1672,
+                    "endColumn": 51,
+                    "endOffset": 1719
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1724,
+                    "endColumn": 46,
+                    "endOffset": 1766
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 1771,
+                    "endColumn": 33,
+                    "endOffset": 1800
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 1805,
+                    "endColumn": 40,
+                    "endOffset": 1841
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 1846,
+                    "endColumn": 40,
+                    "endOffset": 1882
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1887,
+                    "endColumn": 47,
+                    "endOffset": 1930
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 1935,
+                    "endColumn": 67,
+                    "endOffset": 1998
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2003,
+                    "endColumn": 49,
+                    "endOffset": 2048
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2053,
+                    "endColumn": 41,
+                    "endOffset": 2090
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2095,
+                    "endColumn": 55,
+                    "endOffset": 2146
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 1,
+                        "startOffset": 2527,
+                        "endColumn": 52,
+                        "endOffset": 2578
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2151,
+                    "endColumn": 53,
+                    "endOffset": 2200
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2205,
+                    "endColumn": 37,
+                    "endOffset": 2238
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2243,
+                    "endColumn": 63,
+                    "endOffset": 2302
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 2307,
+                    "endColumn": 49,
+                    "endOffset": 2352
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 2357,
+                    "endColumn": 55,
+                    "endOffset": 2408
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 2413,
+                    "endColumn": 65,
+                    "endOffset": 2474
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 2479,
+                    "endColumn": 40,
+                    "endOffset": 2515
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 2520,
+                    "endColumn": 61,
+                    "endOffset": 2577
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 2582,
+                    "endColumn": 53,
+                    "endOffset": 2631
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 2636,
+                    "endColumn": 44,
+                    "endOffset": 2676
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 2681,
+                    "endColumn": 33,
+                    "endOffset": 2710
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 2715,
+                    "endLine": 60,
+                    "endColumn": 9,
+                    "endOffset": 3072
+                },
+                "from": {
+                    "file": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\values\\theme.xml"
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {

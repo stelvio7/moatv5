@@ -581,7 +581,19 @@ public class LiveListActivity extends Activity {
 			return Math.max(0, 1.0f / (float) Math.pow(2, Math.abs(offset)));
 		}
 	}
-	
+
+	public String getSavedFastIdx() {
+		SharedPreferences sp = getSharedPreferences(Util.getApplicationName(getApplicationContext()), MODE_PRIVATE);
+		return sp.getString("fastidx", "0");
+	}
+
+	public void saveFastIdx(String fastidx) {
+		SharedPreferences sp = getSharedPreferences(Util.getApplicationName(getApplicationContext()), MODE_PRIVATE);
+		SharedPreferences.Editor editor = sp.edit();
+		editor.putString("fastidx", fastidx);
+		editor.commit();
+	}
+
 	private String getAuth(){
 		SharedPreferences sp = getSharedPreferences(Util.getApplicationName(getApplicationContext()), MODE_PRIVATE);
 		return sp.getString("auth", "");
@@ -751,6 +763,7 @@ public class LiveListActivity extends Activity {
     		// TODO Auto-generated method stub
 
     		Log.i(null, "url" + vod_url + " :idx:"+ liveList.get(position).getIdx());
+			saveFastIdx(String.valueOf(position));
     		checkPlay(result_code, vod_url, liveList.get(position).getIdx());
     		isClicked = false;
     	}
