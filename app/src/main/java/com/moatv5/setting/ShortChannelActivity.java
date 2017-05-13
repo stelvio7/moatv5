@@ -423,7 +423,7 @@ public class ShortChannelActivity extends Activity implements OnClickListener{
 			TextView txtNowChannel2 = (TextView)layout.findViewById(R.id.txtNowChannel2);
 			txtNowChannel2.setText(liveList.get(i).getTitle());
 			TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
-			txtNextTime.setText(liveList.get(i).getNextTime().substring(2));
+			txtNextTime.setText(liveList.get(i).getNextTime() + "~");
 			TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
 			txtNextBroad.setText(liveList.get(i).getNextTitle());
 			LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
@@ -461,8 +461,10 @@ public class ShortChannelActivity extends Activity implements OnClickListener{
 			
 			viewMenu = true;
 			slmenu.setVisibility(View.VISIBLE);
-			liveList.get(0).getBtns().setFocusable(true);
-			liveList.get(0).getBtns().requestFocus();
+			if(liveList.size() > 0) {
+				liveList.get(0).getBtns().setFocusable(true);
+				liveList.get(0).getBtns().requestFocus();
+			}
     	//}
 		
 	}

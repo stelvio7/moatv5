@@ -16,16 +16,16 @@
         "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\detailcable.xml"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shortchannel.xml",
-        "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\shortchannel.xml"
+        "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shoppingdetailcoverflow.xml",
+        "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\shoppingdetailcoverflow.xml"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listlive.xml",
         "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\listlive.xml"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shoppingdetailcoverflow.xml",
-        "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\shoppingdetailcoverflow.xml"
+        "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\shortchannel.xml",
+        "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\shortchannel.xml"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\child.xml",
@@ -48,24 +48,24 @@
         "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\layout\\yellowdetailcoverflow.xml"
     },
     {
-        "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinner_item.xml",
-        "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\spinner_item.xml"
-    },
-    {
         "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mainmenu.xml",
         "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\mainmenu.xml"
+    },
+    {
+        "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\spinner_item.xml",
+        "source": "E:\\oldData\\201703android\\moatv5\\app\\src\\main\\res\\layout\\spinner_item.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\detailshow.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\layout\\detailshow.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\detailcable.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\layout\\detailcable.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\infoyellow.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\layout\\infoyellow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\detailcable.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\201703tv\\moatv5\\app\\src\\main\\res\\layout\\detailcable.xml"
     },
     {
         "merged": "E:\\oldData\\201703android\\moatv5\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",

@@ -58,6 +58,6 @@
 	<string name="serverchanged"> 서버로 연결되었습니다.</string>
 	<string name="servernotchange">현재 서버입니다.</string>
 	
-	<string name="nowbroadcast">현재 방송</string>
-	<string name="nextbroadcast">다음 방송</string>
+	<string name="nowbroadcast">현재 방송 :</string>
+	<string name="nextbroadcast">다음 방송 :</string>
 </resources>

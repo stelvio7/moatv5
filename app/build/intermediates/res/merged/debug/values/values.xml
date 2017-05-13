@@ -25,14 +25,14 @@
     <string name="menuedu">교육/다큐</string>
     <string name="menushow">쇼/오락</string>
     <string name="menuupdate">업데이트</string>
-    <string name="nextbroadcast">다음 방송</string>
+    <string name="nextbroadcast">다음 방송 :</string>
     <string name="no">아니오</string>
     <string name="nonet">인터넷 연결이 되지 않습니다. 인터넷 연결을 확인하세요.</string>
     <string name="nopoint">시청할 포인트가 부족합니다. 포인트를 확인해 주십시오.</string>
     <string name="nosearch">검색결과가 없습니다.</string>
     <string name="noupdate">현재 최신버전입니다.</string>
     <string name="novideo">영상을 재생할 수 없습니다.</string>
-    <string name="nowbroadcast">현재 방송</string>
+    <string name="nowbroadcast">현재 방송 :</string>
     <string name="ok">확인</string>
     <string name="opendate">개봉일</string>
     <string name="point">평    점</string>

@@ -84,13 +84,11 @@ public class ListMenuLiveAdapter extends BaseAdapter {
         viewHolder.ll1.setTag("ll1" + String.valueOf(position));
         viewHolder.ll2.setTag("ll2" + String.valueOf(position));
         if(liveList.get(position).isFocused()){
-            Log.d("dddd", "1111111");
             if(viewHolder.ll1.getTag().equals("ll1" + String.valueOf(position)))
                 viewHolder.ll1.setVisibility(View.VISIBLE);
             if(viewHolder.ll2.getTag().equals("ll2" + String.valueOf(position)))
                 viewHolder.ll2.setVisibility(View.VISIBLE);
         }else{
-            Log.d("dddd", "2222222");
             if(viewHolder.ll1.getTag().equals("ll1" + String.valueOf(position)))
                 viewHolder.ll1.setVisibility(View.GONE);
             if(viewHolder.ll2.getTag().equals("ll2" + String.valueOf(position)))

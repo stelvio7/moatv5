@@ -391,15 +391,19 @@ public class VideoViewActivity extends Activity implements OnClickListener {
             LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.livemenu_row, null, false);
             liveList.get(i).setBtns(layout);
             TextView txtNowBroad = (TextView)layout.findViewById(R.id.txtNowBroad);
-            txtNowBroad.setText(liveList.get(i).getNowTitle());
+            txtNowBroad.setText(liveList.get(i).getNowTitle().trim());
             TextView txtNowChannel = (TextView)layout.findViewById(R.id.txtNowChannel);
-            txtNowChannel.setText(liveList.get(i).getTitle());
+            txtNowChannel.setText(liveList.get(i).getTitle().trim());
             TextView txtNowChannel2 = (TextView)layout.findViewById(R.id.txtNowChannel2);
-            txtNowChannel2.setText(liveList.get(i).getTitle());
+            txtNowChannel2.setText(liveList.get(i).getTitle().trim());
             TextView txtNextTime = (TextView)layout.findViewById(R.id.txtNextTime);
-            txtNextTime.setText(liveList.get(i).getNextTime().substring(2));
+            //String preNextTime = "";
+            //if(liveList.get(i).getNextTime().length() > 2)
+            //preNextTime = liveList.get(i).getNextTime().substring(2).trim();
+            //if(preNextTime.length() > 1)
+            txtNextTime.setText(liveList.get(i).getNextTime() + "~");
             TextView txtNextBroad = (TextView)layout.findViewById(R.id.txtNextBroad);
-            txtNextBroad.setText(liveList.get(i).getNextTitle());
+            txtNextBroad.setText(liveList.get(i).getNextTitle().trim());
             LinearLayout ll1 = (LinearLayout) layout.findViewById(R.id.ll1);
             LinearLayout ll2 = (LinearLayout) layout.findViewById(R.id.ll2);
 
@@ -612,7 +616,8 @@ public class VideoViewActivity extends Activity implements OnClickListener {
                         if (Integer.valueOf(getSavedFastIdx()) < liveList.size()) {
                             liveList.get(Integer.valueOf(getSavedFastIdx())).getBtns().requestFocus();
                         } else {
-                            liveList.get(0).getBtns().requestFocus();
+                            if(liveList.size() > 0)
+                                liveList.get(0).getBtns().requestFocus();
                         }
 
 //                        listView.setItemsCanFocus(true);

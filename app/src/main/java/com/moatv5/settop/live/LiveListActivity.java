@@ -363,7 +363,7 @@ public class LiveListActivity extends Activity {
 			nowTitle.setText(liveList.get(0).getNowTitle());
 			nowTime.setText("(" + liveList.get(0).getNowTime() + ")");
 			nextTitle.setText(liveList.get(0).getNextTitle());
-			nextTime.setText("(" + liveList.get(0).getNextTime() + ")");
+			nextTime.setText("(" + liveList.get(0).getNextTime() + " ~)");
 		}
 		 for(int i = 0; i < liveList.size(); i++){
 			 detailshowbtn[i].setFocusable(true);
