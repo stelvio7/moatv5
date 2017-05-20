@@ -332,7 +332,11 @@ public class SpeedActivity extends Activity {
                 JSONObject json_data = new JSONObject(strJson);
                 int idx = Integer.parseInt(json_data.getString("live_server"));
 
-                idxServer =idx-1;
+                for(int i = 0; i < serverList.size(); i++) {
+                    if(serverList.get(i).getCode().equals(String.valueOf(idx))){
+                        idxServer = i;
+                    }
+                }
                 Log.d("", "idx" + idxServer);
 
                 loginSuccess = true;
