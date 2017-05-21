@@ -414,6 +414,13 @@ public class VideoViewActivity extends Activity implements OnClickListener {
             layout.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if (vv != null) {
+                        if (vv.isPlaying()) {
+                            vv.stopPlayback();
+                            vv = null;
+                        }
+                        vv = null;
+                    }
                     ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, k);
                     viewDetailTask.execute();
                 }
@@ -577,8 +584,40 @@ public class VideoViewActivity extends Activity implements OnClickListener {
             }
             finish();
         } else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+            if (mainid.equals("live")) {
+                if (vv != null) {
+                    if (vv.isPlaying()) {
+                        vv.stopPlayback();
+                        vv = null;
+                    }
+                    vv = null;
+                }
+                int nextIdx = Integer.valueOf(getSavedFastIdx());
+                if(nextIdx < liveList.size() - 1)
+                    nextIdx++;
+                else
+                    nextIdx = 0;
+                ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, nextIdx);
+                viewDetailTask.execute();
+            }
             //return true;
         } else if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+            if (mainid.equals("live")) {
+                if (vv != null) {
+                    if (vv.isPlaying()) {
+                        vv.stopPlayback();
+                        vv = null;
+                    }
+                    vv = null;
+                }
+                int nextIdx = Integer.valueOf(getSavedFastIdx());
+                if(nextIdx > 0)
+                    nextIdx--;
+                else
+                    nextIdx = liveList.size() - 1;
+                ViewDetailTask viewDetailTask = new ViewDetailTask(mContext, nextIdx);
+                viewDetailTask.execute();
+            }
             //return true;
         } else if (keyCode == KeyEvent.KEYCODE_MENU) {
             //이어보기 추가
