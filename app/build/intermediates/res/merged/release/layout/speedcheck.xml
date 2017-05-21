@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" android:background="@drawable/batang">
+    <ImageView
+	    android:id="@+id/tel"
+	    android:layout_width="680dp"
+	     android:layout_height="60dp"
+	     android:paddingLeft="18dp"
+	     android:layout_alignParentLeft="true"
+	     android:layout_alignParentBottom="true">
+	</ImageView>
+	<LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" 
+        >
+        <ImageView android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#ffffff"
+		    android:textSize="20sp"
+		    android:focusable="false"
+		    android:textScaleX="0.9"
+		    android:text="00"
+		    android:background="@drawable/background_day0"
+		    android:layout_marginBottom="7dp"
+		    />
+		<Button android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/imgExpireDate"
+		    android:textColor="#ffffff"
+		    android:textSize="20sp"
+		    android:focusable="false"
+		    android:textScaleX="0.9"
+		    android:text="00"
+		    android:background="@drawable/background_day"
+		    android:layout_marginBottom="7dp"
+		    />
+		<Button android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/imgExpireDate2"
+		    android:textColor="#ffffff"
+		    android:textSize="20sp"
+		    android:focusable="false"
+		    android:layout_marginLeft="5dp"
+		    android:textScaleX="0.9"
+		    android:text="00"
+		    android:background="@drawable/background_day"
+		    android:layout_marginRight="6dp"
+		    />
+    </LinearLayout>
+	<LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingRight="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" 
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/imgLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/image_main_lock_on"/>
+        <ImageView
+            android:id="@+id/imgNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/image_main_net_on"/>
+     </LinearLayout>
+	<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        	<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="42dp"
+            android:background="@drawable/logo"
+            android:visibility="gone" />
+        
+    </LinearLayout>
+	<LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:gravity="center"
+	        android:orientation="vertical" 
+	        android:layout_marginTop="30dp"
+	        android:layout_marginRight="58dp" >
+         	<TextView
+         	    android:id="@+id/txtNowTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:textStyle="bold"
+	            android:textSize="23sp"
+	            />
+         	<TextView
+         	    android:id="@+id/txtNowDay"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#FFFFFF"
+	            android:textStyle="bold"
+	             android:textSize="13sp"
+	            />
+	    </LinearLayout>
+
+	
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+	    android:gravity="center"
+	     android:orientation="vertical">
+        <RelativeLayout
+		    android:paddingTop="0dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+		    <LinearLayout
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:gravity="center_vertical"
+		    	android:orientation="horizontal">
+			    <TextView  
+				    android:id="@+id/categorytext"
+				    android:focusable="false"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textColor="#ffffff"
+				    android:textStyle="bold"
+				    android:textSize="18sp"
+				    android:layout_marginTop="1dp"
+				    android:text="설정 ＞ 인터넷 속도체크"
+				     />
+				</LinearLayout>
+		</RelativeLayout>
+		<ImageView 
+		     android:focusable="false"
+		     android:layout_width="wrap_content"
+		     android:layout_height="wrap_content"
+		     android:src="@drawable/arrow_top"
+		     android:layout_marginTop="8dp"
+		     android:layout_marginBottom="12dp"
+		    >
+		</ImageView>
+
+		
+
+		<LinearLayout
+		    
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/detail_bg"
+		    android:gravity="center_horizontal"
+		    android:orientation="vertical" >
+		    <LinearLayout
+			    android:layout_width="950dp"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="20dp"
+			    android:orientation="horizontal" >
+			    
+			 	<LinearLayout
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:gravity="center"
+				    android:layout_weight="1"
+				    android:orientation="vertical" >
+				    <RelativeLayout
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content">
+					    <ImageView 
+					         android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/speed_1"/>
+					    <TextView 
+					        android:id="@+id/txtSpeed"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="42dp"
+					        android:layout_marginRight="176dp"
+					        android:layout_alignParentRight="true"
+					        android:textColor="#FFFFFF"
+				            android:textStyle="bold"
+				            android:textSize="22sp"/>
+				 	</RelativeLayout>
+				    <RelativeLayout
+				        android:layout_weight="1"
+					    android:layout_width="wrap_content"
+					    android:layout_height="120dp">
+					    <ImageView 
+					        android:id="@+id/speedback"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="10dp"
+					        android:background="@drawable/speed_2"/>
+					    <ImageView 
+					        android:id="@+id/imgArrow"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_alignParentBottom="true"
+					        android:layout_marginBottom="10dp"
+					        android:layout_marginLeft="1dp"
+					        android:background="@drawable/speed_arrow"/>
+					</RelativeLayout>
+				    <ImageView 
+				         android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="15dp"
+				        android:background="@drawable/speed_3"/>
+				    <LinearLayout 
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="2dp"
+				        android:gravity="center"
+				        android:orientation="horizontal">
+				        <ImageView 
+					        
+					        android:layout_marginLeft="20dp"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/speed_4"
+					        android:focusable="false"/>
+				        <LinearLayout 
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="2dp"
+					        android:gravity="center"
+					        android:orientation="horizontal">
+					        <RelativeLayout 
+					            android:layout_width="wrap_content"
+					        	android:layout_height="wrap_content">
+						        <Spinner
+						            android:id="@+id/txtServer"
+								    android:drawSelectorOnTop="false"
+								    android:layout_marginLeft="16dp"
+								    android:layout_width="50dp"
+								    android:layout_height="wrap_content"
+								    android:padding="0dp"
+								    android:gravity="center"
+								    android:textSize="26sp"
+								    android:textColor="#FFFFFF"
+								    android:background="@drawable/speed_select"
+								    android:focusable="false"
+								    >
+								</Spinner>
+								 <Button 
+								     android:id="@+id/btnSelectServer"
+							        android:layout_marginLeft="16dp"
+							        android:layout_width="wrap_content"
+							        android:layout_height="wrap_content"
+							        android:background="@drawable/speed_select"
+							        android:focusable="true"/>
+							</RelativeLayout>
+							<Button
+							    android:id="@+id/btnSpeedCheck"
+							    android:layout_marginLeft="15dp"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:background="@drawable/speed_check"
+							    android:focusable="true">
+							</Button>
+						</LinearLayout>
+				    </LinearLayout>
+				    
+				 </LinearLayout>
+				 
+			</LinearLayout>
+
+		    <LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical">
+				
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+	    
+
+     <ProgressBar
+		    android:id="@+id/progressBar1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" 
+		    style="?android:attr/progressBarStyleLarge"
+		    android:layout_centerInParent="true"
+		    android:visibility="gone"/>
+</RelativeLayout>
